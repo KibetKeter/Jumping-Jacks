@@ -2,20 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Donation;
 use Illuminate\Http\Request;
 
-class DonationController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function __construct()
+     {
+         $this->middleware('admin');
+     }
+
+      public function index()
+      {
+             return view('Admin/dashboard');
+      }
 
     /**
      * Show the form for creating a new resource.
