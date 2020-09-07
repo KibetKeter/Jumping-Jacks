@@ -45,9 +45,9 @@
                               <div class="col-md-6">
                                 <select name="role" class="browser-default custom-select">
                                   <option disabled selected>Select Your role</option>
-                                  <option value=2>Supplier</option>
-                                  <option value=3>Donor</option>
-                                </select>
+                                  <option value=1>Admin</option>
+                                  <option value=2>GeneralUser</option>
+                                 </select>
                               </div>
 
                         </div>

@@ -66,6 +66,7 @@
             <p>The purpose of the <strong>Jumping Jacks Food Management System</strong> is to offer a solution to the troubles of managing stock, suppliers and donations given to any 
             organization catetring for the nutritional needs of needy citizens. The system can be used by different stakeholders.Enjoy your usage!.</p>
 		</div>
+</div>
 <!-- End of Explanation Page -->
 
 
@@ -92,6 +93,7 @@
                 <p>&copy; Jumping Jacks Group. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> 
                 | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED | Implemented by <strong>Brian Kibet</strong></a>.</p>
             </div>
+</div>
         </body>
     </html>
 </html>

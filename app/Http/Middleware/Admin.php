@@ -24,14 +24,10 @@ class Admin
 
       if(Auth::check() && Auth::user()->roleId == 2)
       {
-        return redirect('/supplier');
+        return redirect('/generaluser');
       }
 
-      if(Auth::check() && Auth::user()->roleId == 3)
-      {
-        return redirect('/donor');
 
-       }
 
     }
 }
