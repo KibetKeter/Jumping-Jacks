@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Supplier;
 use Illuminate\Http\Request;
 
-class SupplierController extends Controller
+class DonorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +14,12 @@ class SupplierController extends Controller
 
      public function __construct()
      {
-         $this->middleware('supplier');
+         $this->middleware('donor');
      }
 
     public function index()
     {
-      return view('Supplier/dashboard');
-
+      return view('Donor/dashboard');
     }
 
     /**
@@ -48,10 +46,10 @@ class SupplierController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Supplier  $supplier
+     * @param  \App\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function show(Supplier $supplier)
+    public function show(Donation $donation)
     {
         //
     }
@@ -59,10 +57,10 @@ class SupplierController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Supplier  $supplier
+     * @param  \App\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Supplier $supplier)
+    public function edit(Donation $donation)
     {
         //
     }
@@ -71,10 +69,10 @@ class SupplierController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Supplier  $supplier
+     * @param  \App\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supplier $supplier)
+    public function update(Request $request, Donation $donation)
     {
         //
     }
@@ -82,10 +80,10 @@ class SupplierController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Supplier  $supplier
+     * @param  \App\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Supplier $supplier)
+    public function destroy(Donation $donation)
     {
         //
     }
