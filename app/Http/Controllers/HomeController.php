@@ -14,9 +14,8 @@ class HomeController extends Controller
     public function __construct()
     {
       $this->middleware('admin');
-      $this->middleware('supplier');
-      $this->middleware('donor');
-    }
+      $this->middleware('generaluser');
+     }
 
     /**
      * Show the application dashboard.

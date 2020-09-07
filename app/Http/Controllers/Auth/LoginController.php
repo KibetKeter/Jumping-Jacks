@@ -31,10 +31,7 @@ class LoginController extends Controller
 
     protected function redirectTo( ) {
     if (Auth::check() && Auth::user()->roleId == 2) {
-        return('/supplier');
-    }
-    elseif (Auth::check() && Auth::user()->roleId == 3) {
-        return('/donor');
+        return('/generaluser');
     }
     else {
         return('/admin');
