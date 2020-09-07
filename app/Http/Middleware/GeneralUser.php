@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class Supplier
+class GeneralUser
 {
     /**
      * Handle an incoming request.
@@ -27,11 +27,5 @@ class Supplier
         return $next($request);
 
       }
-
-      if(Auth::check() && Auth::user()->roleId == 3)
-      {
-        return redirect('/donor');
-
     }
-}
 }

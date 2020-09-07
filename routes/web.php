@@ -20,5 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
-Route::get('/supplier', 'SupplierController@index')->name('supplier.dashboard');
-Route::get('/donor', 'DonorController@index')->name('donor.dashboard');
+Route::get('/generaluser', 'GeneralUserController@index')->name('generaluser.dashboard');

@@ -19,21 +19,14 @@ class RoleTableSeeder extends Seeder
             'updated_at' => now()
         ]);
 
-        //supplier
+        //GeneralUser
         DB::table('roles')->insert([
-            'name' => 'Supplier',
-            'description' => 'Supplier',
+            'name' => 'GeneralUser',
+            'description' => 'GeneralUser',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
-        //Donor
-        DB::table('roles')->insert([
-            'name' => 'Donor',
-            'description' => 'Donor',
-            'isDonor' => true,
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        
     }
 }

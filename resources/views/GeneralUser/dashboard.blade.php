@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Supplier You are logged in! 
+                    GeneralUser You are logged in! 
                 </div>
             </div>
         </div>
