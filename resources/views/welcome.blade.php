@@ -1,100 +1,97 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Page title -->
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jumping Jacks</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
+        <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+        <!--[if IE 6]>
+        <link href="default_ie6.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+</head>
+<style>
+</style>
+<!-- Menu Header(Wrapper) -->
+<body>
+<div id="wrapper">
+       <!-- Menu Wrapper -->
+        <div id="menu-wrapper">
+            <div id="menu" class="container">
+                    <ul>
+                        <li class="current_page_item"><a href="#">Homepage</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                            @if (Route::has('login'))
+                                @auth
+                                    <li><a href="{{ url('/home') }}">Home</a></li>
+                                @else
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                @if (Route::has('register'))
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                @endif
+                                @endauth
+                            @endif
+                    </ul>
+            </div>
+    <!-- End of Menu Wrapper -->
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Jumping Jacks 
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+<!-- Start of Header Wrapper -->
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1><a href="#">Jumping Jacks</a></h1>
+                        <p>Food Management System</p>
                 </div>
             </div>
         </div>
-    </body>
+</div>
+<!-- End of Menu Header(Wrapper) -->
+
+<!-- Start of Image (Banner) -->
+<div id="banner"></div>
+<!-- End of Image Banner -->
+
+<!-- Start of Explanation Page -->
+<div id="page" class="container">
+		<div id="content">
+			<div class="title">
+				<h2>Purpose of this System</h2>
+				<span class="byline">System Created by the Jumping Jacks Group</span> </div>
+            <p>The purpose of the <strong>Jumping Jacks Food Management System</strong> is to offer a solution to the troubles of managing stock, suppliers and donations given to any 
+            organization catetring for the nutritional needs of needy citizens. The system can be used by different stakeholders.Enjoy your usage!.</p>
+		</div>
+<!-- End of Explanation Page -->
+
+
+<!-- Footer Section(Wrapper) -->
+<div id="footer-wrapper">
+    <div id="footer" class="container">
+        <div id="footer">
+                    <h2>Follow Us</h2>
+                        </div>
+                            <p>Find more Information about us on the following platforms</p>
+                                <ul class="contact">
+                                    <li><a href= www.twitter.com  class="icon icon-twitter"><span>Twitter</span></a></li>
+                                    <li><a href= www.facebook.com class="icon icon-facebook"><span>Facebook</span></a></li>
+                                    <li><a href="www.dribbble.com" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+                                    <li><a href="www.tumblr.com" class="icon icon-tumblr"><span>Tumblr</span></a></li>
+                                    <li><a href="www.pinterest.com" class="icon icon-rss"><span>Pinterest</span></a></li>
+                                </ul>
+                        </div>
+            </div>
+    </div>
+    
+<!-- Absolute Footer -->
+            <div id="copyright" class="container">
+                <p>&copy; Jumping Jacks Group. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> 
+                | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED | Implemented by <strong>Brian Kibet</strong></a>.</p>
+            </div>
+        </body>
+    </html>
 </html>
