@@ -44,7 +44,7 @@
                         <div class="wrap-input100 validate-input m-b-26" data-validate="E-Mail is required">
                             <span for="email" class="label-input100">{{ __('E-Mail Address') }}</span>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
-                            required autocomplete="email" autofocus placeholder="Enter E-Mail">
+                            required autocomplete="email" placeholder="Enter E-Mail">
                             <span class="focus-input100"></span>
                             @error('email')
                                         <span class="invalid-feedback" role="alert">
