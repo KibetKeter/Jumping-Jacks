@@ -32,7 +32,7 @@
 <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(images_Login/bg-01.jpg);">
+				<div class="login100-form-title" style="background-image: url({{ asset('images_Login/bg-01.jpg') }});">
 					<span class="login100-form-title-1">
 						Its time to register yourself😉😎
 					</span>
