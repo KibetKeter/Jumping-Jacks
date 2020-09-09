@@ -91,7 +91,7 @@
 <!-- Absolute Footer -->
             <div id="copyright" class="container">
                 <p>&copy; Jumping Jacks Group. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> 
-                | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED | Implemented by <strong>Brian Kibet</strong></a>.</p>
+                | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
             </div>
 </div>
         </body>
