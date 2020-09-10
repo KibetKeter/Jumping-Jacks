@@ -78,11 +78,11 @@
                         </div>
                             <p>Find more Information about us on the following platforms</p>
                                 <ul class="contact">
-                                    <li><a href= www.twitter.com  class="icon icon-twitter"><span>Twitter</span></a></li>
-                                    <li><a href= www.facebook.com class="icon icon-facebook"><span>Facebook</span></a></li>
-                                    <li><a href="www.dribbble.com" class="icon icon-dribbble"><span>Dribbble</span></a></li>
-                                    <li><a href="www.tumblr.com" class="icon icon-tumblr"><span>Tumblr</span></a></li>
-                                    <li><a href="www.pinterest.com" class="icon icon-rss"><span>Pinterest</span></a></li>
+                                    <li><a href= "http://twitter.com"  class="icon icon-twitter"><span>Twitter</span></a></li>
+                                    <li><a href= "http://facebook.com" class="icon icon-facebook"><span>Facebook</span></a></li>
+                                    <li><a href="http://dribbble.com" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+                                    <li><a href="http://tumblr.com" class="icon icon-tumblr"><span>Tumblr</span></a></li>
+                                    <li><a href="http://pinterest.com" class="icon icon-rss"><span>Pinterest</span></a></li>
                                 </ul>
                         </div>
             </div>
@@ -91,7 +91,7 @@
 <!-- Absolute Footer -->
             <div id="copyright" class="container">
                 <p>&copy; Jumping Jacks Group. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> 
-                | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
+                | Design by <a href=" http://127.0.0.1:8000" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
             </div>
 </div>
         </body>

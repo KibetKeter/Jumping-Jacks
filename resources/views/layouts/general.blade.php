@@ -102,17 +102,14 @@
             </div>
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="Settings">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Lock">
-                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    <a style = "text-align: center; width: 230px; height:40px;padding-top: 10px;"
+                     data-toggle="tooltip" data-placement="top" title="Logout">
+                        <span href="{{ route('logout') }}" class="glyphicon glyphicon-off" aria-hidden="true"
+                                        onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();"> 
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form></span>
                     </a>
             </div>
             <!-- /menu footer buttons -->
@@ -154,11 +151,10 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
+                      </div>
                     </div>
                   </li>
         </div>
