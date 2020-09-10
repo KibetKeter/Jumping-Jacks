@@ -36,17 +36,8 @@
                         <a href="index.html" class="site_title" ></i> <span>Jumping Jacks Application</span></a>
                     </div>
                     <div class="clearfix"></div>
-
-                <!-- menu profile quick info -->
-                    <div class="profile clearfix">
-                        <div class="profile_info">
-                            <span>Welcome,</span>
-                                <h2>{{ Auth::user()->name }}</h2>
-                                </a>
-                        </div>
-                    </div>
-                <!-- /menu profile quick info -->
-
+                    <br/>
+                    <br/>
                   <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
@@ -155,26 +146,28 @@
                                         @csrf
                                     </form>
                       </div>
-                    </div>
+               </div>
                   </li>
         </div>
 </div>
 </div>
      <!-- page content -->
      <div class="right_col" role="main">
-          <div class="">
+          <div class="row">
             <div class="page-title">
-              <div class="title_left">
-                <h3>Login <small> Status</small></h3>
-              </div>
+                <div class="title_left">
+                  <h3>Karibu👋🏿<small>{{ Auth::user()->name }} </small></h3>
+                </div>
+            </div>
             
-            <div class="clearfix"></div>
+              <div class="clearfix"></div>
 
-            <div class="row">
+            <!-- <div class="row"> -->
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>This is your dashboard as a General User</h2>
+                    <!-- <h2>This is your dashboard as a General User</h2> -->
+                    @yield('content')
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -190,17 +183,16 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-
-                  <div class="x_content">
-
-                    <div class="col-md-9 col-sm-9  ">
-
+                  <div class="x_content"></div>
+                    <div class="col-md-9 col-sm-9  "></div>
                       <br />
-                      @yield('content')
                     </div>
+                                         
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
     <!-- jQuery -->
     <script src="{{asset('gentelelela/vendors/jquery/dist/jquery.min.js')}}"></script>
