@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Supplier; 
 
 class GeneralUserController extends Controller
 {
@@ -22,6 +23,23 @@ class GeneralUserController extends Controller
       return view('GeneralUser/dashboard');
     }
 
+    public function input_supplier()
+    {
+      return view('GeneralUser/supplierinput');
+    }
+    
+    public function push_to_form()
+    {
+        $supplier = new Supplier();
+        $supplier->supplier_name = request('supplier_name');
+        $supplier->supplier_location = request('supplier_location');
+        $supplier->tel_no = request('telephone_number');
+        $supplier->supplier_email = request('email');
+        $supplier->supplier_product = request('product');
+        $supplier->save();
+    return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+
+   }
     /**
      * Show the form for creating a new resource.
      *
