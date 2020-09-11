@@ -20,8 +20,7 @@
                       <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
                       <br/>
                       <br/>
-                      <button type="button" class="btn btn-secondary">Update</button>
-                      <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register</a>
+                      <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
                       <br/>
                     </div>
                   <!-- End of the content of the Tile -->
