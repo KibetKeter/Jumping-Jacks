@@ -99,6 +99,7 @@
                     <div class="x_content">
                        <p> This section is used to input the donations given by the donors.
                        <br/>
+                       </br>
                        <strong>Click the button below to input the donations</strong></p>
                         <br/>
                         <br/>
