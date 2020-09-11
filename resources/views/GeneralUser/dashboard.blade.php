@@ -21,7 +21,7 @@
                       <br/>
                       <br/>
                       <button type="button" class="btn btn-secondary">Update</button>
-                      <button type="button" class="btn btn-primary">Register</button>
+                      <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register</a>
                       <br/>
                     </div>
                   <!-- End of the content of the Tile -->
