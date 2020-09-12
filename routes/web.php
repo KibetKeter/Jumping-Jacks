@@ -24,3 +24,6 @@ Route::get('/generaluser', 'GeneralUserController@index')->name('generaluser.das
 Route::get('/generaluser/supplierinput', 'GeneralUserController@input_supplier')->name('input_supplier');
 // Post Supplier details form to db Route
 Route::post('/generaluser/supplierinput/create', 'GeneralUserController@push_to_form')->name('input_supplier.create');
+
+Route::get('/generaluser/donorinput', 'GeneralUserController@input_donor')->name('input_donor');
+Route::post('/generaluser/donorinput/create', 'GeneralUserController@push_form')->name('input_donor.create');
