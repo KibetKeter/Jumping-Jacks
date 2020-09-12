@@ -17,11 +17,11 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                       <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date
-                      <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
-                      <br/>
-                      <br/>
-                      <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
-                      <br/>
+                        <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
+                        <br/>
+                        <br/>
+                        <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
+                        <br/>
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
