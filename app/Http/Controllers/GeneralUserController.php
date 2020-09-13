@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Supplier; 
 use App\Donor_Accounts;
+use App\Donation;
 
 class GeneralUserController extends Controller
 {
@@ -23,8 +24,14 @@ class GeneralUserController extends Controller
     {
       return view('GeneralUser/dashboard');
     }
+<<<<<<< HEAD
                             // SUPPLIER INPUTS
 // start
+=======
+
+   
+
+>>>>>>> 760392cb5ae52759b50a8a8b0881ed4ad56a6561
     public function input_supplier()
     {
       return view('GeneralUser/supplierinput');
@@ -42,9 +49,15 @@ class GeneralUserController extends Controller
     return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
 
    }
+<<<<<<< HEAD
 // end
                              //DONOR DETAILS INPUTS
 // Start
+=======
+
+   
+
+>>>>>>> 760392cb5ae52759b50a8a8b0881ed4ad56a6561
      public function input_donor()
     {
       return view('GeneralUser/donorinput');
@@ -63,6 +76,23 @@ class GeneralUserController extends Controller
    }
 // end
 
+
+// Donations
+public function input_donations()
+    {
+      return view('GeneralUser/donationsinput');
+    }
+    public function push_towards_form()
+    {
+        $donations = new Donation();
+        $donations->donor_name  = request('donor_name');
+        $donations->description = request('description');
+       
+    return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
+
+   }
+
+   
     /**
      * Show the form for creating a new resource.
      *

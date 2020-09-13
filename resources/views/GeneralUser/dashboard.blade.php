@@ -8,7 +8,7 @@
         <div class="x_panel tile fixed_height_320">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Supplier Details🚚</h2>
+                        <h2> Supplier Details🚚</h2>
                               <ul>
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                               </ul>
@@ -20,7 +20,7 @@
                         <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
                         <br/>
                         <br/>
-                        <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
+                        <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Record Supplier details</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -33,7 +33,7 @@
         <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Donor Details🤵🏿</h2>
+                        <h2> Donor Details🤵🏿</h2>
                             <ul>
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -42,11 +42,10 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to update the Donors Details. We as a company value our Donors alot.
-                        For this reason we take a lot of pride in ensuring our donors list and details are always up to date. 
+                        <p> This section is used to update the Donors Details. We take a lot of pride in ensuring our donors list and details are always up to date. 
                         <br/> <strong>Click the button below to Update and Register a new Donor Respectively</strong></p>
-                        <br/>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Register</a>
+                        <br/><br>
+                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Record Donor details</a>
                         
                     </div>
                   <!-- End of the content of the Tile -->
@@ -59,7 +58,7 @@
         <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Stock📦</h2>
+                        <h2>Stock 📦</h2>
                             <ul>
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -69,13 +68,13 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                         <p> This section is used to update the amount of stock available within the company.
-                        <br/>
-                        <br/>
+                        <br>
+                    
                         <strong>Click the button below to input the amount of stock brought in by the supplier</strong></p>
                         <br/>
                         <br/>
-                        <button type="button" class="btn btn-secondary">Update</button>
-                        <button type="button" class="btn btn-primary">Register</button>
+                        <!----<button type="button" class="btn btn-secondary">Update</button> -->
+                        <button type="button" class="btn btn-primary">Record Stock Details</button>
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -96,14 +95,15 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                       <p> This section is used to input the donations given by the donors.
+                       <p> This section is used to input the various donations given by the donors.
+
                        <br/>
                        </br>
-                       <strong>Click the button below to input the donations</strong></p>
+                       <strong>Click the button below to record the donations</strong></p>
                         <br/>
                         <br/>
-                        <button type="button" class="btn btn-secondary">Update</button>
-                        <button type="button" class="btn btn-primary">Register</button>
+                        
+                        <a href="{{url('/generaluser/donationsinput') }}" type="button" class="btn btn-primary">Record Donations</a>
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -115,7 +115,7 @@
           <div>
                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                             <div class="x_title">
-                                <h2>View all Current Stock📥</h2>
+                                <h2>View Current Stock📥</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                       </li>
@@ -124,12 +124,13 @@
                           </div>
                              <div class="x_content">
                                 <p> This section is used to update the amount of stock available within the company.<br/> 
-                               <br/>
-                               <br/> 
+                               
+                               <br><br>
                                 <strong>Click to view table</strong></p>
                                 <br/>
                                 <br/>
-                                <button type="button" class="btn btn-secondary">Click me!😏</button>
+                                <br>
+                                <button type="button" class="btn btn-secondary">Click to view inventory</button>
                     </div>
                             </div>
                           </div>
