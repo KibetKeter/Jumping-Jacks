@@ -24,14 +24,8 @@ class GeneralUserController extends Controller
     {
       return view('GeneralUser/dashboard');
     }
-<<<<<<< HEAD
                             // SUPPLIER INPUTS
 // start
-=======
-
-   
-
->>>>>>> 760392cb5ae52759b50a8a8b0881ed4ad56a6561
     public function input_supplier()
     {
       return view('GeneralUser/supplierinput');
@@ -47,17 +41,9 @@ class GeneralUserController extends Controller
         $supplier->supplier_product = request('product');
         $supplier->save();
     return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
-
    }
-<<<<<<< HEAD
-// end
                              //DONOR DETAILS INPUTS
 // Start
-=======
-
-   
-
->>>>>>> 760392cb5ae52759b50a8a8b0881ed4ad56a6561
      public function input_donor()
     {
       return view('GeneralUser/donorinput');
