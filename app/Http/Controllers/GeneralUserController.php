@@ -23,7 +23,8 @@ class GeneralUserController extends Controller
     {
       return view('GeneralUser/dashboard');
     }
-
+                            // SUPPLIER INPUTS
+// start
     public function input_supplier()
     {
       return view('GeneralUser/supplierinput');
@@ -41,7 +42,9 @@ class GeneralUserController extends Controller
     return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
 
    }
-
+// end
+                             //DONOR DETAILS INPUTS
+// Start
      public function input_donor()
     {
       return view('GeneralUser/donorinput');
@@ -58,6 +61,7 @@ class GeneralUserController extends Controller
     return redirect()->route('input_donor')->withSuccess(['Donor has been Registered Successfully👍🏿']);
 
    }
+// end
 
     /**
      * Show the form for creating a new resource.

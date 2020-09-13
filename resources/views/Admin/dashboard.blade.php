@@ -10,7 +10,7 @@
     @endif
     <strong>You are an Admin🚓👮🏿‍♂️👮🏿‍♀️</strong>
 </div>
-    <div class="row">
+<div class="row">
     <!-- First Tile -->
       <div class="col-md-4 col-sm-4 ">
         <div class="x_panel tile fixed_height_320">
@@ -25,12 +25,11 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                       <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date
-                      <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
-                      <br/>
-                      <br/>
-                      <button type="button" class="btn btn-secondary">Update</button>
-                      <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Register</a>
-                      <br/>
+                        <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
+                        <br/>
+                        <br/>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
+                        <br/>
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -55,8 +54,8 @@
                         For this reason we take a lot of pride in ensuring our donors list and details are always up to date. 
                         <br/> <strong>Click the button below to Update and Register a new Donor Respectively</strong></p>
                         <br/>
-                        <button type="button" class="btn btn-secondary">Update</button>
-                        <button type="button" class="btn btn-primary">Register</button>
+                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Register</a>
+                        
                     </div>
                   <!-- End of the content of the Tile -->
           </div>

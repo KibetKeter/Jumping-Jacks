@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Supplier; 
+use App\Donor_Accounts;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -20,6 +21,26 @@ class AdminController extends Controller
       {
              return view('Admin/dashboard');
       }
+                    // SUPPLIER INPUTS
+// start
+            // Load the Page
+                    public function input_supplier()
+                    {
+                        return view('Admin/supplierinput');
+                    }
+            // Push to DB
+                    public function push_to_form()
+                    {
+                        $supplier = new Supplier();
+                        $supplier->supplier_name = request('supplier_name');
+                        $supplier->supplier_location = request('supplier_location');
+                        $supplier->tel_no = request('telephone_number');
+                        $supplier->supplier_email = request('email');
+                        $supplier->supplier_product = request('product');
+                        $supplier->save();
+                    return redirect()->route('admin_input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+                    }
+// end
 
     /**
      * Show the form for creating a new resource.
