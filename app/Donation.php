@@ -16,6 +16,6 @@ class Donation extends Model
          * @var array
          */
         protected $fillable = [
-            'donor_name',   'description',
+            'donor_name',   'description', 'amount',
         ];
 }

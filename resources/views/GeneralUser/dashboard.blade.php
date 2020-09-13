@@ -20,7 +20,7 @@
                         <br/><strong> Click the button below to Update and Register a new Supplier Respectively</strong></p>
                         <br/>
                         <br/>
-                        <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Record Supplier details</a>
+                        <a href="{{url('/generaluser/supplierinput') }}" type="button" class="btn btn-primary">Record Supplier details📝</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -45,7 +45,7 @@
                         <p> This section is used to update the Donors Details. We take a lot of pride in ensuring our donors list and details are always up to date. 
                         <br/> <strong>Click the button below to Update and Register a new Donor Respectively</strong></p>
                         <br/><br>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Record Donor details</a>
+                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Record Donor details😏</a>
                         
                     </div>
                   <!-- End of the content of the Tile -->
