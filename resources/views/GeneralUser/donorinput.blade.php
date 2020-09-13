@@ -10,15 +10,15 @@
 								<div class="x_content">
 									<br />
                                     @if(session()->has('success'))
-                                    <div class="alert">
-                                        <ul>
-                                            @foreach(session()->get('success') as $message)
-                                                <li>
-                                                    {{$message}}
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+										<div class="alert">
+											<ul>
+												@foreach(session()->get('success') as $message)
+													<li>
+														{{$message}}
+													</li>
+												@endforeach
+											</ul>
+										</div>
                                     @endif
 									<form action="{{ route('input_donor.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
@@ -63,7 +63,7 @@
 											<div class="col-md-6 col-sm-6 offset-md-3">
 												<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>
 												<button class="btn btn-primary" type="reset">Reset</button>
-												<button href= type="submit" class="btn btn-success">Submit</button>
+												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>
 

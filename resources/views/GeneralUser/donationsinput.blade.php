@@ -34,11 +34,13 @@
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" id="description" name="description" required="required" class="form-control">
-										
-<div class = "container">
-                                 
 
-	<div class="ln_solid"></div>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Donation Amount<span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input type="text" id="description" name="description" required="required" class="form-control">
+<div class = "container">
+<div class="ln_solid"></div>
 	<div class="item form-group">
 											
 <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>

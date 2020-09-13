@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Donor_Accounts;
 use Illuminate\Http\Request;
 
