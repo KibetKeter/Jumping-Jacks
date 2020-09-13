@@ -27,3 +27,7 @@ Route::post('/generaluser/supplierinput/create', 'GeneralUserController@push_to_
 
 Route::get('/generaluser/donorinput', 'GeneralUserController@input_donor')->name('input_donor');
 Route::post('/generaluser/donorinput/create', 'GeneralUserController@push_form')->name('input_donor.create');
+
+//Donations details from route
+Route::get('/generaluser/donationsinput', 'GeneralUserController@input_donations')->name('input_donations');
+Route::post('/generaluser/donationsinput/create', 'GeneralUserController@push_towards_form')->name('input_donations.create');
