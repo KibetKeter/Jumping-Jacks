@@ -8,7 +8,7 @@
                     <div id="menu-wrapper">
                         <div id="menu" class="container">
                                 <ul>
-                                    <li class="current_page_item"><a href="{{ asset('') }}">Click to go back to Homepage🏠</a></li>
+                                    <li class="current_page_item"><a href="/">Click to go back to Homepage🏠</a></li>
                             </ul>
                         </div>
                     <div>
