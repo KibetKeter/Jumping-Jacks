@@ -15,6 +15,12 @@ class CreateDonorAccountsTable extends Migration
     {
         Schema::create('donor__accounts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->boolean('Individual')->default(true);
+            $table->string('donor_name');
+            $table->string('donor_location');
+            $table->string('tel_no');
+            $table->string('donor_email');
+            $table->string('donor_product');
             $table->timestamps();
         });
     }

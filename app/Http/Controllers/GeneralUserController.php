@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Supplier; 
+use App\Donor_Accounts;
+use App\Donation;
 
 class GeneralUserController extends Controller
 {
@@ -21,7 +24,62 @@ class GeneralUserController extends Controller
     {
       return view('GeneralUser/dashboard');
     }
+                            // SUPPLIER INPUTS
+// start
+    public function input_supplier()
+    {
+      return view('GeneralUser/supplierinput');
+    }
+    
+    public function push_to_form()
+    {
+        $supplier = new Supplier();
+        $supplier->supplier_name = request('supplier_name');
+        $supplier->supplier_location = request('supplier_location');
+        $supplier->tel_no = request('telephone_number');
+        $supplier->supplier_email = request('email');
+        $supplier->supplier_product = request('product');
+        $supplier->save();
+    return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+   }
+                             //DONOR DETAILS INPUTS
+// Start
+     public function input_donor()
+    {
+      return view('GeneralUser/donorinput');
+    }
+    public function push_form()
+    {
+        $donor = new Donor_Accounts();
+        $donor->donor_name = request('donor_name');
+        $donor->donor_location = request('donor_location');
+        $donor->tel_no = request('telephone_number');
+        $donor->donor_email = request('email');
+        $donor->donor_product = request('product');
+        $donor->save();
+    return redirect()->route('input_donor')->withSuccess(['Donor has been Registered Successfully👍🏿']);
 
+   }
+// end
+
+
+// Donations
+public function input_donations()
+    {
+      return view('GeneralUser/donationsinput');
+    }
+    public function push_towards_form()
+    {
+        $donations = new Donation();
+        $donations->donor_name  = request('donor_name');
+        $donations->description = request('description');
+        $donations->amount = request('amount');
+        $donations->save();
+    return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
+
+   }
+
+   
     /**
      * Show the form for creating a new resource.
      *

@@ -3,8 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
-class Donations extends Model
+class Donation extends Model
 {
-    //
+    
+     use Notifiable;
+    
+        /**
+         * The attributes that are mass assignable.
+         *
+         * @var array
+         */
+        protected $fillable = [
+            'donor_name','description', 'amount',
+        ];
 }

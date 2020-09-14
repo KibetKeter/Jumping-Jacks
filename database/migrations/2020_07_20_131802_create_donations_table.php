@@ -17,6 +17,7 @@ class CreateDonationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('donor_name');
             $table->string('description');
+            $table->integer('amount');
             $table->timestamps();
         });
     }
