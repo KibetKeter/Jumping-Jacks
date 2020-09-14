@@ -75,6 +75,7 @@ public function input_donations()
         $donations = new Donation();
         $donations->donor_name  = request('donor_name');
         $donations->description = request('description');
+        $donations->description = request('amount');
         $donations->save();
     return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
 
