@@ -8,7 +8,7 @@
                     <div id="menu-wrapper">
                         <div id="menu" class="container">
                                 <ul>
-                                    <li class="current_page_item"><a href="http://127.0.0.1:8000">Click to go back to Homepage🏠</a></li>
+                                    <li class="current_page_item"><a href="/">Click to go back to Homepage🏠</a></li>
                             </ul>
                         </div>
                     <div>
