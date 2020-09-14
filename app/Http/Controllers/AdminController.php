@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Supplier; 
 use App\Donor_Accounts;
 use Illuminate\Http\Request;
+use DB;
 
 class AdminController extends Controller
 {
@@ -41,6 +42,38 @@ class AdminController extends Controller
                     return redirect()->route('admin_input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
                     }
 // end
+                    // VIEW SUPPLIER TABLE CONTROLLER
+// START
+                    public function viewSupplier()
+                        {
+                            $suppliers = DB::select('select * from suppliers');
+                            return view('Admin/viewsupplier', ['suppliers'=>$suppliers]);
+                        }
+// END
+// ********************EDIT SUPPLIER TABLE
+// START
+                    public function editSupplier($id)
+                        {
+                            $suppliers = DB::select('select * from suppliers where id = ?', [$id]);
+                            return view ('Admin/suppliersedit' , ['suppliers' => $suppliers]);
+                        }
+// END
+// ********************UPDATE SUPPLIER TABLE
+// START
+                    public function updateSupplier(Request $request,$id)
+                    {
+                        $updated_suppliers_name = $request->input('supplier_name');
+                        $updated_suppliers_location = $request->input('supplier_location');
+                        $updated_suppliers_telno= $request->input('tel_no');
+                        $updated_suppliers_email = $request->input('supplier_email');
+                        $updated_suppliers_product = $request->input('supplier_product');
+
+                    DB::UPDATE('update suppliers SET supplier_name=?, supplier_location=?, tel_no=?, supplier_email=?, supplier_product=? WHERE id = ?'
+                    ,[$updated_suppliers_name,$updated_suppliers_location, $updated_suppliers_telno, $updated_suppliers_email, $updated_suppliers_product]);
+                    return redirect('view_supplier')->with('success','Data Updated');
+            }
+// END
+
 
     /**
      * Show the form for creating a new resource.
