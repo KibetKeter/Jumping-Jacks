@@ -78,7 +78,6 @@ public function input_donations()
         $donations->amount = request('amount');
         $donations->save();
     return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
-
    }
 
    

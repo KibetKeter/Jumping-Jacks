@@ -33,7 +33,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title" ></i> <span>Jumping Jacks Application</span></a>
+                        <a href="index.html" class="site_title"></i> <span>Jumping Jacks Application</span></a>
                     </div>
                     <div class="clearfix"></div>
                     <br/>
@@ -41,55 +41,63 @@
                   <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
+                <h3 style =" font-size: medium;">General</h3>
                 <ul class="nav side-menu">
                     <!-- Home Section -->
-                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                            <li><a ><i class="fa fa-desktop"></i> More about the System <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                <li><a href="index.html">Dashboard</a></li>
-                                <li><a href="index2.html">Dashboard2</a></li>
-                                <li><a href="index3.html">Dashboard3</a></li>
+                                 <li><a style =" font-size: medium;">
+          The purpose of the <strong>Jumping Jacks Food Management System</strong> is to offer a solution to the troubles of managing stock, suppliers and donations given to any 
+            organization catetring for the needs of needy citizens. The system can be used by different stakeholders.Enjoy your usage!.</p></a></li>
                                 </ul>
                             </li>
                     <!-- Additional Sections -->
-                            <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="form.html">General Form</a></li>
-                                    <li><a href="form_advanced.html">Advanced Components</a></li>
-                                    <li><a href="form_validation.html">Form Validation</a></li>
-                                    <li><a href="form_wizards.html">Form Wizard</a></li>
-                                    <li><a href="form_upload.html">Form Upload</a></li>
-                                    <li><a href="form_buttons.html">Form Buttons</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
  <!-- Other editable section -->
             <div class="menu_section">
-               <h3>Live On</h3>
+               <h3 style =" font-size: medium;">Credits</h3>
                 <ul class="nav side-menu">
+                    <li><a> This system was created for the Third Year API Class by:</a> </li>
+                      <!-- Group Members Admission Numbers -->
 
-                    <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                        <li><a href="e_commerce.html">E-commerce</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="project_detail.html">Project Detail</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        </ul>
+                    <li ><a><i class = "fa fa-bolt"></i>Kipketer Brian Kibet <span class="fa fa-chevron-down"></span></a> 
+                             <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 104088</a><li>
+                            </ul>
                     </li>
-
-                    <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                        <li><a href="page_403.html">403 Error</a></li>
-                        <li><a href="page_404.html">404 Error</a></li>
-                        <li><a href="page_500.html">500 Error</a></li>
-                        <li><a href="plain_page.html">Plain Page</a></li>
-                        <li><a href="login.html">Login Page</a></li>
-                        <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                        </ul>
-                    </li>   
+                    <li ><a><i class = "fa fa-magic"></i>Mutuku Sharlene Ndinda<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 111478</a><li>
+                            </ul>
+                    </li>
+                    <li ><a><i class = "fa fa-leaf"></i>Keth Pere Lemaiyan <span class="fa fa-chevron-down"></span></a> 
+                            <ul class="nav child_menu">
+                               <li><a><i class = "fa fa-university"></i>Admission No: 113532</a></li>
+                            </ul>
+                    </li>
+                    <li ><a><i class = "fa fa-futbol-o"></i>Richard Gachiri Murithi<span class="fa fa-chevron-down"></span></a> 
+                            <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 112451</a></li>
+                            </ul>
+                    </li>
+                    <li ><a><i class = "fa fa-lightbulb-o"></i>Susan Mbula Kilonzo<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 113549</a></li>
+                            </ul>
+                    </li>
+                    <li ><a><i class = "fa fa-shopping-cart"></i>Diana Mghoi Kalema<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 110355</a></li>
+                            </ul>
+                    </li>
+                    <li ><a><i class = "fa fa-camera"></i>Joan Njoroge<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a><i class = "fa fa-university"></i>Admission No: 112725</a></li>
+                            </ul>
+                    </li>
                 </ul>
+      
             </div>
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
@@ -98,7 +106,7 @@
                         <span href="{{ route('logout') }}" class="glyphicon glyphicon-off" aria-hidden="true"
                                         onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();"> 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form></span>
                     </a>

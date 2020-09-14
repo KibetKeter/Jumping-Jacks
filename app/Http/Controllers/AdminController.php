@@ -67,12 +67,10 @@ class AdminController extends Controller
                         $updated_suppliers_telno= $request->input('tel_no');
                         $updated_suppliers_email = $request->input('supplier_email');
                         $updated_suppliers_product = $request->input('supplier_product');
+                        DB::UPDATE('update suppliers set supplier_name=?, supplier_location=?, tel_no=?, supplier_email=?, supplier_product=? where id=?',[$updated_suppliers_name,$updated_suppliers_location, $updated_suppliers_telno, $updated_suppliers_email, $updated_suppliers_product, $id]);return redirect()->route('view_supplier')->withSuccess('success','Data Updated');
+                    }
+//END
 
-                    DB::UPDATE('update suppliers set supplier_name=?, supplier_location=?, tel_no=?, supplier_email=?, supplier_product=? where id=?',[$updated_suppliers_name,$updated_suppliers_location, $updated_suppliers_telno, $updated_suppliers_email, $updated_suppliers_product, $id]);
-                     
-                    return redirect()->route('view_supplier')->withSuccess('success','Data Updated');
-            }
-// END
 
 
     /**
