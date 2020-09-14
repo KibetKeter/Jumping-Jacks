@@ -2,6 +2,7 @@
 @section('content')
 <br/>
 </br/>
+<title>General User View</title>
     <div class="row">
     <!-- First Tile -->
       <div class="col-md-4 col-sm-4 ">
