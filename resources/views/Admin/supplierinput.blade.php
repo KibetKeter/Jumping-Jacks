@@ -62,10 +62,10 @@
 									<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to General User Page</a>
+												<button type="submit" class="btn btn-success">Submit the form</button><br/>
 												<button class="btn btn-primary" type="reset">Reset the form</button>
-												<button type="submit" class="btn btn-success">Submit the form</button>
-												<a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a>
+												<a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
+												<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to General User Page</a><br/>
 											</div>
 										</div>
 
