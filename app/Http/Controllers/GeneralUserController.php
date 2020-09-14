@@ -41,9 +41,11 @@ class GeneralUserController extends Controller
         $supplier->supplier_product = request('product');
         $supplier->save();
     return redirect()->route('input_supplier')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+
    }
-                             //DONOR DETAILS INPUTS
-// Start
+
+   
+
      public function input_donor()
     {
       return view('GeneralUser/donorinput');
@@ -73,8 +75,7 @@ public function input_donations()
         $donations = new Donation();
         $donations->donor_name  = request('donor_name');
         $donations->description = request('description');
-        $donations->amount = request('amount');
-        $donations->save();
+       
     return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
 
    }
