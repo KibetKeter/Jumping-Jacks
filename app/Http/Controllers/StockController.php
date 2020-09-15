@@ -9,13 +9,13 @@ class StockController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * 
      * @return \Illuminate\Http\Response
      */
 
     public function __construct()
     {
-        $this->middleware('stock');
+         
     }
 
     public function index()
@@ -29,7 +29,7 @@ class StockController extends Controller
            // Load the Page
                    public function stock()
                    {
-                       return view('stock');
+                       return view('GeneralUser.stock');
                    }
            // Push to DB
                    public function push_to_form()
