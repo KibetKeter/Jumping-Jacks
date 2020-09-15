@@ -12,10 +12,67 @@ class StockController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('stock');
+    }
+
     public function index()
     {
-        //
-    }
+        {
+            return view('GeneralUser/dashboard');
+        }
+     }
+                   // Stock INPUTS
+// start
+           // Load the Page
+                   public function stock()
+                   {
+                       return view('stock');
+                   }
+           // Push to DB
+                   public function push_to_form()
+                   {
+                    $stock = new stock();
+                    $stock->stock_type = request('stock_type');
+                    $stock->stock_amount = request('stock_amount');
+                    $stock->supplierId = request('supplierId');
+                       
+                    $stock->save();
+                  return redirect()->route('stock')->withSuccess(['Stock Updated Successfully👍🏿']);
+                  //<a href= "{{route('stock')}}" ->withSuccess 'Stock Updated Successfully👍🏿'>;
+                }
+// end
+                   // VIEW STOCK TABLE CONTROLLER
+// START
+                   public function viewstock()
+                       {
+                           $stock = DB::select('select * from stocks');
+                           return view('viewstock', ['stock'=>$stock]);
+                       }
+// END
+// ********************EDIT STOCK TABLE
+// START
+                   public function editstock($id)
+                       {
+                           $suppliers = DB::select('select * from stocks where id = ?', [$id]);
+                           return view ('editstock' , ['stock'=>$stock]);
+                       }
+// END
+// ********************UPDATE STOCK TABLE
+// START
+                   public function updatestock(Request $request,$id)
+                   {
+                       $updated_stock_type = $request->input('stock_type');
+                       $updated_stock_amount = $request->input('stock_amount');
+                       $updated_supplierId= $request->input('supplierId');
+                       DB::UPDATE('update stocks set stock_type=?, stock_amount=?, supplierId=?',[$updated_stock_type,$updated_stock_amount, $updated_supplerId, $id]);return redirect()->route('view_stock')->withSuccess('success','Stock Updated');
+                   }
+//END
+
+
+    
 
     /**
      * Show the form for creating a new resource.

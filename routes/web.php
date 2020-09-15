@@ -63,3 +63,7 @@ Route::post('/update/{id}', 'AdminController@updateSupplier')->name('admin_updat
 // Donations details from route
 Route::get('/generaluser/donationsinput', 'GeneralUserController@input_donations')->name('input_donations');
 Route::post('/generaluser/donationsinput/create', 'GeneralUserController@push_towards_form')->name('input_donations.create');
+
+//stock view
+Route::get('/generaluser/stock', 'StockController@stock')->name('stock');
+Route::post('/generaluser/stock/create', 'StockController@push_towards_form')->name('stock.create');
