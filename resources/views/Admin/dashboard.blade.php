@@ -25,8 +25,8 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                       <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date</p>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a>
-                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
                         <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
                         <br/>
                     </div>

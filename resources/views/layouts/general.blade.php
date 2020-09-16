@@ -66,51 +66,58 @@
                                 <li><a><i class = "fa fa-university"></i>Admission No: 104088</a><li>
                             </ul>
                     </li>
+
                     <li ><a><i class = "fa fa-magic"></i>Mutuku Sharlene Ndinda<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li><a><i class = "fa fa-university"></i>Admission No: 111478</a><li>
                             </ul>
                     </li>
-                    <li ><a><i class = "fa fa-leaf"></i>Keth Pere Lemaiyan <span class="fa fa-chevron-down"></span></a> 
+
+                    <li ><a><i class = "fa fa-leaf"></i>Keith Pere Lemaiyan <span class="fa fa-chevron-down"></span></a> 
                             <ul class="nav child_menu">
                                <li><a><i class = "fa fa-university"></i>Admission No: 113532</a></li>
                             </ul>
                     </li>
+
                     <li ><a><i class = "fa fa-futbol-o"></i>Richard Gachiri Murithi<span class="fa fa-chevron-down"></span></a> 
                             <ul class="nav child_menu">
                                 <li><a><i class = "fa fa-university"></i>Admission No: 112451</a></li>
                             </ul>
                     </li>
+
                     <li ><a><i class = "fa fa-lightbulb-o"></i>Susan Mbula Kilonzo<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li><a><i class = "fa fa-university"></i>Admission No: 113549</a></li>
                             </ul>
                     </li>
+
                     <li ><a><i class = "fa fa-shopping-cart"></i>Diana Mghoi Kalema<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li><a><i class = "fa fa-university"></i>Admission No: 110355</a></li>
                             </ul>
                     </li>
+
                     <li ><a><i class = "fa fa-camera"></i>Joan Njoroge<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li><a><i class = "fa fa-university"></i>Admission No: 112725</a></li>
                             </ul>
                     </li>
+
                 </ul>
-      
             </div>
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-                    <a style = "text-align: center; width: 230px; height:40px;padding-top: 10px;"
-                     data-toggle="tooltip" data-placement="top" title="Logout">
-                        <span href="{{ route('logout') }}" class="glyphicon glyphicon-off" aria-hidden="true"
-                                        onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();"> 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form></span>
-                    </a>
-            </div>
+            
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+                <a style = "text-align: center; width: 230px; height:40px;padding-top: 10px;"
+                  data-toggle="tooltip" data-placement="top" title="Logout">
+                    <span href="{{ route('logout') }}" class="glyphicon glyphicon-off" aria-hidden="true"
+                                    onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();"> 
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                          @csrf
+                          </form></span>
+                </a>
+        </div>
             <!-- /menu footer buttons -->
             </div>
         </div>
