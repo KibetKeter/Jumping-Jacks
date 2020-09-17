@@ -27,7 +27,7 @@
                       <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date</p>
                         <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
                         <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -116,6 +116,33 @@
           </div>
         </div>
   <!-- End of Fourth Tile -->
+  <!-- Start of Fifth Tile -->
+    <div class="col-md-4 col-sm-4 ">
+                              <div class="x_panel tile fixed_height_320 overflow_hidden">
+                                          <div class="x_title">
+                                              <h2>Order Section🚚</h2>
+                                                  <ul class="nav navbar-right panel_toolbox">
+                                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                    </li>
+                                                  </ul>
+                                              <div class="clearfix"></div>
+                                        </div>
+                                      
+                                          <div class="x_content">
+                                            <h4>Brief Explanation of this Section</h4>
+                                              <p> This section is used to order materials that may be required by the company to disrtribute. e.g.<i>If the company
+                                              wants to buy flour, they will need to make an order to the Maize Milling Company registered as a Supplier in the system</i> 
+                                              .<br/><strong> Click the button below to update</strong></p>
+                                          </div>
+                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">View Order Table</a>
+                                          <a href="" type="button" class="btn btn-primary">Edit Suppliers</a>
+                                </div>
+                              </div>
+                  </div>
+                <br/>
+                <br/>
+  <!-- End of Fifth Tile -->
 
   <!-- For copy and Pasting for the Admin Functionalities -->
   <!-- Second  Tile -->

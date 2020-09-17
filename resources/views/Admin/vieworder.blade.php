@@ -1,5 +1,6 @@
 @extends('layouts.general')
 @section('content')
+Section to view table
 <title>Suppliers Table</title>
 
 <div class="col-md-12 col-sm-12 ">
@@ -20,41 +21,38 @@
                         <tr>
                           <th>ID</th>
                           <th>Supplier Name</th>
-                          <th>Supplier Location</th>
-                          <th>Telephone Number</th>
-                          <th>Supplier Email</th>
-                          <th>Supplier Product</th>
+                          <th>Item Ordered</th>
+                          <th>Quantity of Material Ordered</th>
+                          <th>Date of Delivery</th>
                           <th>Created at</th>
                           <th>Updated at</th>
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($suppliers as $row)
+                        @foreach($orders as $row)
                             <tr>
                                 <td>{{$row->id }}</td>
                                 <td>{{$row->supplier_name }}</td>
-                                <td>{{$row->supplier_location }}</td>
-                                <td>{{$row->tel_no }}</td>
-                                <td>{{$row->supplier_email}}</td>
-                                <td>{{$row->supplier_product}}</td>
+                                <td>{{$row->item_ordered }}</td>
+                                <td>{{$row->quantity }}</td>
+                                <td>{{$row->delivery_date}}</td>
                                 <td>{{$row->created_at}}</td>
                                 <td>{{$row->updated_at }}</td>
                                 <td>
                                     <a href= "click_edit/{{ $row->id }} " class= "btn btn-info">Edit</a>
                                 </td>
                               </tr>
-                              
                         @endforeach
                       </tbody>
                     </table>
                     <br/>
-                    <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register a Supplier</a><br/>
-                    <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to General User Page</a>
+                    <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                    <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to  Admin Dashboard</a>
                   </div>
                 </div>
               </div>
             </div>
  </div>
  </div>
- @endsection
+@endsection
