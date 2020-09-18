@@ -107,7 +107,7 @@ class AdminController extends Controller
 
 
             //END
-
+                    
 
              // VIEW ORDERTABLE CONTROLLER
     // START
@@ -152,13 +152,13 @@ class AdminController extends Controller
         public function editOrder($id)
                 {
                     $supplier_name =DB::select('select supplier_name from suppliers');
-                    $results1 = with(['supplier_name',$supplier_name]);
                     $orders = DB::select('select * from orders where id = ?', [$id]);
-                    return view ('Admin/orderedit' , ['orders' => $orders] , $results1);
+                    return view ('Admin/orderedit', ['supplier_name'=>$supplier_name ,'orders' => $orders]);
+                    
                 }
 // END
 
-// ********************UPDATE SUPPLIER TABLE
+// ********************UPDATE ORDER TABLE
             // START
                 public function updateOrder(Request $request,$id)
                 {
