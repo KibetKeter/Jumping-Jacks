@@ -35,12 +35,13 @@ class StockController extends Controller
                    public function push_to_form()
                    {
                     $stock = new stock();
+                    $stock->stock_id = request('id');
                     $stock->stock_type = request('stock_type');
                     $stock->stock_amount = request('stock_amount');
                     $stock->supplierId = request('supplierId');
                        
                     $stock->save();
-                  return redirect()->route('stock')->withSuccess(['Stock Updated Successfully👍🏿']);
+                  return redirect()->route('GeneralUser.stock')->withSuccess(['Stock Updated Successfully👍🏿']);
                   //<a href= "{{route('stock')}}" ->withSuccess 'Stock Updated Successfully👍🏿'>;
                 }
 // end
