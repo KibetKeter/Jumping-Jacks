@@ -17,7 +17,9 @@ class CreateStocksTable extends Migration
             $table->bigIncrements('id');  
             $table->string('stock_type');
             $table->string('stock_amount');
-            $table->string('supplierId')->references('id')->on('suppliers');;
+            $table->date('delivery_date');
+            $table->date('best_before_date');
+            $table->text('description');
             $table->timestamps();
         });
     }

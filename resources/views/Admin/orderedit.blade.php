@@ -22,10 +22,21 @@ This is the order edit page
 											</ul>
 										</div>
 										@endif
-                                      
 									<form   action="/update/{{ $orders[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
-                                            <div class="item form-group">
+                                        <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="heard"><strong>Choose Supplier:</strong></label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <select id = "supplier_name" name="supplier_name" class="form-control" required>
+                                                        <option value="">{{ $orders[0] ->supplier_name}}</option>
+                                                        <option>Choose a new Supplier to edit the Supplier</option>
+														@foreach($supplier_name as $supplier_name)
+															<option value="{{ $supplier_name->supplier_name}}">{{ $supplier_name->supplier_name}}</option>
+														@endforeach                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="item form-group">
                                                 <label class="col-form-label col-md-3 col-sm-3 label-align" for="heard"><strong>Choose Supplier:</strong></label>
                                                 <div class="col-md-6 col-sm-6 ">
                                                     <select id = "supplier_name" name="supplier_name" class="form-control" required>
@@ -35,7 +46,7 @@ This is the order edit page
                                                         <option value="mouth">Word of mouth</option>
                                                     </select>
                                                 </div>
-                                            </div>                                        
+                                            </div>                                         -->
                                         <div class="item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><strong>Item to be supplied</strong><span class="required">*</span>
                                             </label>

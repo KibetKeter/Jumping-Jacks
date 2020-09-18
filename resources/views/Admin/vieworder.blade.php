@@ -6,7 +6,7 @@ Section to view table
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Suppliers Registered in the Database<small>Users</small></h2>
+                    <h2>Pending orders</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -14,7 +14,7 @@ Section to view table
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                     <p class="text-muted font-13 m-b-30">
-                     The table below shows all the Suppliers registered in the Jumping Jacks Database
+                     The table below shows all the Order registered in the Jumping Jacks Database
                     </p>
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
@@ -25,7 +25,7 @@ Section to view table
                           <th>Quantity of Material Ordered</th>
                           <th>Date of Delivery</th>
                           <th>Created at</th>
-                          <th>Updated at</th>
+                          
                           <th></th>
                         </tr>
                       </thead>
@@ -38,7 +38,7 @@ Section to view table
                                 <td>{{$row->quantity }}</td>
                                 <td>{{$row->delivery_date}}</td>
                                 <td>{{$row->created_at}}</td>
-                                <td>{{$row->updated_at }}</td>
+                       
                                 <td>
                                     <a href= "click_edit/{{ $row->id }} " class= "btn btn-info">Edit</a>
                                 </td>
@@ -47,7 +47,7 @@ Section to view table
                       </tbody>
                     </table>
                     <br/>
-                    <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                    <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
                     <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to  Admin Dashboard</a>
                   </div>
                 </div>

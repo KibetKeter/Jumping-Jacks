@@ -20,7 +20,9 @@
                           <th>Stock ID</th>
                           <th>Type of Stock Available</th>
                           <th>Amount of Stock Available</th>
-                          <th>Supplier ID</th>
+                          <th>Delivery Date</th>
+                          <th>Best Before</th>
+                          <th>Description of the stock</th>
                           <th>Created At</th>
                           <th>Update At</th>
                         </tr>
@@ -31,7 +33,9 @@
                                 <td>{{$row->id}}</td>
                                 <td>{{$row->stock_type}}</td>
                                 <td>{{$row->stock_amount}}</td>
-                                <td>{{$row->supplierId}}</td>
+                                <td>{{$row->delivery_date}}</td>
+                                <td>{{$row->best_before_date}}</td>
+                                <td>{{$row->description}}</td>
                                 <td>{{$row->created_at}}</td>
                                 <td>{{$row->updated_at}}</td>
                         </tr>
@@ -41,7 +45,8 @@
                     </table>
                   
                   </div>
-                  <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>
+                  <a href = "{{ url ('/generaluser/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a><br/>
+                  <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to Dashboard</a>
                 </div>
               </div>
             </div>

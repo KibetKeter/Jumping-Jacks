@@ -25,7 +25,7 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                       <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date</p>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now</a><br/>
                         <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
                         <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
                         <br/>
@@ -132,11 +132,10 @@
                                             <h4>Brief Explanation of this Section</h4>
                                               <p> This section is used to order materials that may be required by the company to disrtribute. e.g.<i>If the company
                                               wants to buy flour, they will need to make an order to the Maize Milling Company registered as a Supplier in the system</i> 
-                                              .<br/><strong> Click the button below to update</strong></p>
                                           </div>
                                           <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
                                           <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">View Order Table</a>
-                                          <a href="" type="button" class="btn btn-primary">Edit Suppliers</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">Edit Orders</a>
                                 </div>
                               </div>
                   </div>
