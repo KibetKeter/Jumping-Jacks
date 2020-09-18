@@ -72,6 +72,30 @@ class AdminController extends Controller
                         return redirect()->route('view_supplier')->withSuccess('success','Data Updated');
                     }
 //END
+                            // DONOR INPUTS
+ // start
+            // Load the Page
+                    public function input_donor()
+                    {
+                        return view('Admin/donorinput');
+                    }
+            // Push to DB
+                    public function push_form()
+                    {
+                        $donor = new Donor_Accounts();
+                        $donor->donor_name = request('donor_name');
+                        $donor->donor_location = request('donor_location');
+                        $donor->tel_no = request('telephone_number');
+                        $donor->donor_email = request('email');
+                        $donor->donor_product = request('product');
+                        $donor->save();
+                    return redirect()->route('admin_input_donor')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+                    }
+// end
+                  // VIEW SUPPLIER TABLE CONTROLLER
+// START
+
+// END
 
                             // ORDER INPUTS
 // start

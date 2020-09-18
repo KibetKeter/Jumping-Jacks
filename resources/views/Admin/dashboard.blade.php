@@ -53,7 +53,8 @@
                         For this reason we take a lot of pride in ensuring our donors list and details are always up to date. 
                         <br/> <strong>Click the button below to Update and Register a new Donor Respectively</strong></p>
                         <br/>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Register</a>
+                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Donor </a><br/>
                         
                     </div>
                   <!-- End of the content of the Tile -->
