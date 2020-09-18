@@ -75,6 +75,12 @@ Route::post('/admin/orderinput/create', 'AdminController@push_order_form')->name
 // 7) Route to view Order Table
 Route::get('/admin/orderinput/table', 'AdminController@viewOrder')->name('view_order');
 
+// 7) Route to Accounts 
+Route::get('/admin/accountsview/table', 'AdminController@viewAccounts')->name('view_accounts');
+Route::get('/admin/accountsview/edit/{id}', 'AdminController@editAccounts')->name('edit_accounts');
+Route::post('admin/accountsedit/update/{id}', 'AdminController@updateAccounts')->name('update_accounts');
+
+
 // 4) Edit Orders function
 Route::get('admin/orderinput/click_edit/{id}', 'AdminController@editOrder')->name('admin_edit_order');
 Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');

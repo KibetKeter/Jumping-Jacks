@@ -37,11 +37,11 @@ class StockController extends Controller
                     $stock = new stock();
                     $stock->stock_type = request('stock_type');
                     $stock->stock_amount = request('stock_amount');
-                    $stock->supplierId = request('supplierId');
-                       
+                    $stock->delivery_date = request('delivery_date');
+                    $stock->best_before_date = request('best_before_date');
+                    $stock->description = request('description');
                     $stock->save();
                   return redirect()->route('stock')->withSuccess(['Stock Updated Successfully👍🏿']);
-                  //<a href= "{{route('stock')}}" ->withSuccess 'Stock Updated Successfully👍🏿'>;
                 }
 // end
                    // VIEW STOCK TABLE CONTROLLER

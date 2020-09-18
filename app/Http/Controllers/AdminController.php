@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Supplier; 
 use App\Donor_Accounts;
+use App\Supplier_Accounts;
 use App\Orders;
 use Illuminate\Http\Request;
 use DB;
@@ -109,16 +110,28 @@ class AdminController extends Controller
             // START
                 public function push_order_form()
                     {
+
                         $order = new Orders();
                         $order->supplier_name = request('supplier_name');
                         $order->item_ordered = request('order_item');
                         $order->quantity = request('quantity');
                         $order->delivery_date = request('delivery');
                         $order->save();
-                    return redirect()->route('admin_input_order')->withSuccess(['Order has been Registered Successfully👍🏿']);
-                    }
-            //END
+                    
+                        $accounts = new Supplier_Accounts();
+                        $accounts->supplier_name = request('supplier_name');
+                        $accounts->item_ordered = request('order_item');
+                        $accounts->quantity = request('quantity');
+                        $accounts->save();
 
+                        return redirect()->route('admin_input_order')->withSuccess(['Order has been Registered Successfully👍🏿']);
+                        
+                
+                }
+
+
+            //END
+                    
 
              // VIEW ORDERTABLE CONTROLLER
     // START
@@ -129,18 +142,47 @@ class AdminController extends Controller
                 }
     // END
 
+             // VIEW ACCOUNTS CONTROLLER
+
+    public function viewAccounts()
+    { 
+        $accounts = DB::select('select * from supplier__accounts');
+        return view('Admin/checkaccounts', ['accounts'=>$accounts]);
+    }
+    // END
+
+     // EDIT ACCOUNTS CONTROLLER
+
+     public function editAccounts($id)
+     { 
+        $accounts = DB::select('select * from supplier__accounts where id = ?', [$id]);
+        return view ('Admin/editaccounts' , ['accounts' => $accounts]);
+     }
+
+     public function updateAccounts(Request $request,$id)
+     { 
+                    $updated_accounts_name = $request->input('supplier_name');
+                    $updated_accounts_itemordered = $request->input('item_ordered');
+                    $updated_accounts_quantity= $request->input('quantity');
+                    $updated_delivery_status= $request->input('status');
+                    DB::UPDATE('update supplier__accounts set supplier_name=?, item_ordered=?, quantity=?, notDelivered=? where id=?',
+                    [$updated_accounts_name, $updated_accounts_itemordered, $updated_accounts_quantity, $updated_delivery_status, $id]);
+                    return redirect()->route('view_accounts')->withSuccess('success','Data Updated');
+     }
+// END
+
             // ********************EDIT ORDERS TABLE
 // START
         public function editOrder($id)
                 {
                     $supplier_name =DB::select('select supplier_name from suppliers');
-                    $results1 = with(['supplier_name',$supplier_name]);
                     $orders = DB::select('select * from orders where id = ?', [$id]);
-                    return view ('Admin/orderedit' , ['orders' => $orders] , $results1);
+                    return view ('Admin/orderedit', ['supplier_name'=>$supplier_name ,'orders' => $orders]);
+                    
                 }
 // END
 
-// ********************UPDATE SUPPLIER TABLE
+// ********************UPDATE ORDER TABLE
             // START
                 public function updateOrder(Request $request,$id)
                 {
