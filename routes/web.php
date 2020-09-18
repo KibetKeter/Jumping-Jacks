@@ -32,6 +32,17 @@ Route::get('/generaluser/donorinput', 'GeneralUserController@input_donor')->name
 // 4)  Post Donor Details form to db route
 Route::post('/generaluser/donorinput/create', 'GeneralUserController@push_form')->name('input_donor.create');
 
+// 5) Stock view
+Route::get('/generaluser/stock', 'StockController@stock')->name('stock');
+Route::post('/generaluser/stock/create', 'StockController@push_to_form')->name('stock.create');
+
+// 6) Donations details from route
+Route::get('/generaluser/donationsinput', 'GeneralUserController@input_donations')->name('input_donations');
+Route::post('/generaluser/donationsinput/create', 'GeneralUserController@push_towards_form')->name('input_donations.create');
+
+// 7) Route to view Stock Table
+Route::get('/generaluser/orderstock/table', 'GeneralUserController@viewStock')->name('view_stock');
+
 // ************************************ADMIN ROUTES************************************
 
 // 1) Admin Details form Route
@@ -69,10 +80,4 @@ Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_o
 // // 4)  Post Donor Details form to db route
 // Route::post('/admin/donorinput/create', 'AdminController@push_form')->name('input_donor.create');
 
-// Donations details from route
-Route::get('/generaluser/donationsinput', 'GeneralUserController@input_donations')->name('input_donations');
-Route::post('/generaluser/donationsinput/create', 'GeneralUserController@push_towards_form')->name('input_donations.create');
 
-//stock view
-Route::get('/generaluser/stock', 'StockController@stock')->name('stock');
-Route::post('/generaluser/stock/create', 'StockController@push_towards_form')->name('stock.create');
