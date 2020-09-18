@@ -75,7 +75,7 @@
                         <br/>
                         <br/>
                         <!----<button type="button" class="btn btn-secondary">Update</button> -->
-                        <button type="button" class="btn btn-primary">Record Stock Details</button>
+                        <a href = "{{ url ('/generaluser/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a>
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -131,7 +131,7 @@
                                 <br/>
                                 <br/>
                                 <br>
-                                <button type="button" class="btn btn-secondary">Click to view inventory</button>
+                                <a href = "{{ url('/generaluser/orderstock/table')}}" type="button" class="btn btn-secondary">Click to view inventory</a>
                     </div>
                             </div>
                           </div>

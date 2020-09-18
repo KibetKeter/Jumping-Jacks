@@ -21,6 +21,7 @@
 											</ul>
 										</div>
 										@endif
+										
 									<form action="{{ route('admin_input_order.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
                                             <div class="item form-group">
@@ -29,7 +30,7 @@
                                                     <select id = "supplier_name" name="supplier_name" class="form-control" required>
                                                         <option value="">Choose Supplier</option>
 														@foreach($supplier_name as $supplier_name)
-														<option value="{{ $supplier_name->supplier_name}}">{{ $supplier_name->supplier_name}}</option>
+															<option value="{{ $supplier_name->supplier_name}}">{{ $supplier_name->supplier_name}}</option>
 														@endforeach                                                        
                                                     </select>
                                                 </div>
@@ -87,5 +88,4 @@
 							</div>
 						</div>
 					</div>
-
 @endsection

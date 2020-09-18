@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Supplier; 
 use App\Donor_Accounts;
 use App\Donation;
+use DB;
 
 class GeneralUserController extends Controller
 {
@@ -80,7 +81,14 @@ public function input_donations()
     return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
    }
 
-   
+                                    //    STOCK TABLE CONTROLLER
+            public function viewStock()
+                    {   
+                        $stocks = DB::select('select * from stocks');
+                        return view('GeneralUser/viewstock',['stocks'=>$stocks]);
+                    }
+
+                                    // END STOCK CONTROLLER
     /**
      * Show the form for creating a new resource.
      *
