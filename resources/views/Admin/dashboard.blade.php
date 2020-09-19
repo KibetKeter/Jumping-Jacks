@@ -148,6 +148,7 @@
                               </div>
                  
   <!-- End of Fifth Tile -->
+  
 
   <!-- For copy and Pasting for the Admin Functionalities -->
   <!-- Second  Tile -->
@@ -175,6 +176,31 @@
               </p>
             </div>
           </div>
+              <!--End of Second Tile -->
+
+                <!-- Second  Tile -->
+          <div>
+                <div class="x_panel tile fixed_height_320 overflow_hidden">
+                            <div class="x_title">
+                                <h2>View Accounts 💰 </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                      </li>
+                                    </ul>
+                                <div class="clearfix"></div>
+                          </div>
+                             <div class="x_content">
+                                <p> This section is used to view account details in the company.<br/> 
+                               <br/>
+                               <br/> 
+                                <strong>Click to view table</strong></p>
+                                <br/>
+                                <br/>
+                                <a href="{{ route('view_accounts')}} " type="button" class="btn btn-primary">View Accounts</a>
+                    </div>
+                            </div>
+                          </div>
+                </div>
               <!--End of Second Tile -->
               <!-- For copy and Pasting for the Admin Functionalities -->
               <!--  Extra Tile-->
