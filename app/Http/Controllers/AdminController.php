@@ -5,6 +5,7 @@ use App\Supplier;
 use App\Donor_Accounts;
 use App\Supplier_Accounts;
 use App\Orders;
+use App\Donation;
 use Illuminate\Http\Request;
 use DB;
 
@@ -172,6 +173,46 @@ class AdminController extends Controller
                 }
             //END
             
+
+
+
+
+// **********************INPUT DONATIONS IN ADMIN
+
+              public function input_donations()
+    {
+      return view('Admin/donationsadmin');
+    }
+    public function push_towards_form()
+    {
+        $donations = new Donation();
+        $donations->donor_name  = request('donor_name');
+        $donations->description = request('description');
+        $donations->amount = request('amount');
+        $donations->save();
+    return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
+   }
+
+
+// VIEW DONATIONS TABLE
+
+// START
+                    
+ public function viewdonations()
+                        {
+                            $donations = DB::select('select * from donations');
+                            return view('Admin/viewdonations', ['donations'=>$donations]);
+                        }
+
+
+// CRUD DONATIONS TABLE
+
+
+
+
+
+                        
+
     /**
      * 
      * Show the form for creating a new resource.

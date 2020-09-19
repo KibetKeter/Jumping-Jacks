@@ -87,3 +87,11 @@ Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_o
 // Route::post('/admin/donorinput/create', 'AdminController@push_form')->name('input_donor.create');
 
 
+
+// Input Donations into the Admin dashboard
+Route::get('/admin/donationsadmin', 'AdminController@input_donations')->name('input_donations');
+Route::post('/generaluser/donationsadmin/create', 'AdminController@push_towards_form')->name('input_donations.create');
+
+// Route to view Donations table
+Route::get('/admin/donationsadmin/table', 'AdminController@viewdonations')->name('view_donations');
+
