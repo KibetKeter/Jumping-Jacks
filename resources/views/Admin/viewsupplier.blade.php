@@ -1,7 +1,18 @@
 @extends('layouts.general')
 @section('content')
 <title>Suppliers Table</title>
-
+  <!-- Success Message -->
+        @if(session()->has('success'))
+            <div class="alert">
+              <ul>
+                  @foreach(session()->get('success') as $message)
+                      <li>
+                         {{$message}}
+                      </li>
+                  @endforeach
+              </ul>
+            </div>
+        @endif
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
@@ -26,7 +37,8 @@
                           <th>Supplier Product</th>
                           <th>Created at</th>
                           <th>Updated at</th>
-                          <th></th>
+                          <th>Edit</th>
+                          <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -41,7 +53,10 @@
                                 <td>{{$row->created_at}}</td>
                                 <td>{{$row->updated_at }}</td>
                                 <td>
-                                    <a href= "click_edit/{{ $row->id }} " class= "btn btn-info">Edit</a>
+                                    <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
+                                </td>
+                                <td>
+                                    <a href= "click_delete/{{ $row->id }} " class="btn btn-round btn-danger">Delete</a>
                                 </td>
                               </tr>
                               
