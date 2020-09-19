@@ -55,8 +55,8 @@ Route::post('/admin/supplierinput/create', 'AdminController@push_to_form')->name
 Route::get('/admin/supplierinput/table', 'AdminController@viewSupplier')->name('view_supplier');
 
 // 4) Edit Suppliers function
-Route::get('admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
-Route::post('/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
+Route::get('/admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
+Route::post('admin/supplierinput/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
 // // 5) Admin Register Order
 Route::get('/admin/orderinput', 'AdminController@input_order')->name('admin_input_order');
 // 6) Admin Order Push to DB
@@ -65,8 +65,12 @@ Route::post('/admin/orderinput/create', 'AdminController@push_order_form')->name
 Route::get('/admin/orderinput/table', 'AdminController@viewOrder')->name('view_order');
 
 // 4) Edit Orders function
-Route::get('admin/orderinput/click_edit/{id}', 'AdminController@editOrder')->name('admin_edit_order');
-Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
+Route::get('/admin/orderinput/click_edit/{id}', 'AdminController@editOrder')->name('admin_edit_order');
+Route::post('/admin/orderinput/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
+
+// 4) Delete Orders function
+Route::get('/admin/supplierinput/click_delete/{id}', 'AdminController@deleteSupplier')->name('admin_delete_supplier');
+// Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
 
 // // 4) Route to get DB details
 // Route::get('/admin/supplierinput/table', 'AdminController@viewSupplier')->name('view_supplier');
