@@ -52,15 +52,10 @@
                         <p> This section is used to update the Donors Details. All donors that donate to the company are recorded here. 
                         
                         <br/>
-<<<<<<< HEAD
-                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
-                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Donor </a><br/>
-=======
-                        <br>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Record donor details</a>
-                        <button type="button" class="btn btn-primary">View current donors</button>
+                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register donor details</a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Current Donor </a><br/>
                         <button type="button" class="btn btn-primary">Edit donor details</button>
->>>>>>> 04e84fcfab58568bd0f98161f14cdec579a995fe
+
                         
                     </div>
                   <!-- End of the content of the Tile -->
