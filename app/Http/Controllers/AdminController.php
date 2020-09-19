@@ -5,6 +5,7 @@ use App\Supplier;
 use App\Donor_Accounts;
 use App\Supplier_Accounts;
 use App\Orders;
+use App\Donation;
 use Illuminate\Http\Request;
 use DB;
 
@@ -63,41 +64,51 @@ class AdminController extends Controller
 // ********************UPDATE SUPPLIER TABLE
 // START
                     public function updateSupplier(Request $request,$id)
-                    {
-                        $updated_suppliers_name = $request->input('supplier_name');
-                        $updated_suppliers_location = $request->input('supplier_location');
-                        $updated_suppliers_telephone= $request->input('tel_no');
-                        $updated_suppliers_email = $request->input('supplier_email');
-                        $updated_suppliers_product = $request->input('supplier_product');
-                        DB::UPDATE('update suppliers set supplier_name=?, supplier_location=?, tel_no=?, supplier_email=?, supplier_product=? where id=?',[$updated_suppliers_name,$updated_suppliers_location, $updated_suppliers_telephone, $updated_suppliers_email, $updated_suppliers_product, $id]);
-                        return redirect()->route('view_supplier')->withSuccess('success','Data Updated');
-                    }
+                        {
+                            $updated_suppliers_name = $request->input('supplier_name');
+                            $updated_suppliers_location = $request->input('supplier_location');
+                            $updated_suppliers_telephone= $request->input('tel_no');
+                            $updated_suppliers_email = $request->input('supplier_email');
+                            $updated_suppliers_product = $request->input('supplier_product');
+                            DB::UPDATE('update suppliers set supplier_name=?, supplier_location=?, tel_no=?, supplier_email=?, supplier_product=? where id=?',[$updated_suppliers_name,$updated_suppliers_location, $updated_suppliers_telephone, $updated_suppliers_email, $updated_suppliers_product, $id]);
+                            return redirect()->route('view_supplier')->withSuccess(['Order has been Edited Successfully👍🏿']);
+                        }
 //END
-                            // DONOR INPUTS
- // start
-            // Load the Page
-                    public function input_donor()
-                    {
-                        return view('Admin/donorinput');
-                    }
-            // Push to DB
-                    public function push_form()
-                    {
-                        $donor = new Donor_Accounts();
-                        $donor->donor_name = request('donor_name');
-                        $donor->donor_location = request('donor_location');
-                        $donor->tel_no = request('telephone_number');
-                        $donor->donor_email = request('email');
-                        $donor->donor_product = request('product');
-                        $donor->save();
-                    return redirect()->route('admin_input_donor')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
-                    }
-// end
+               
                   // VIEW SUPPLIER TABLE CONTROLLER
 // START
 
 // END
+                    // DELETE SUPPLIER TABLE
+//START 
+                    public function deleteSupplier($id)
+                        {
+                            DB::delete('delete from suppliers where id =?',[$id]);
+                            return redirect()->route('view_supplier')->withSuccess(['Supplier has been Deleted Successfully👍🏿']);
+                       }                       
 
+
+// END
+                      // DONOR INPUTS
+ // start
+            // Load the Page
+            public function input_donor()
+            {
+                return view('Admin/donorinput');
+            }
+    // Push to DB
+            public function push_form()
+            {
+                $donor = new Donor_Accounts();
+                $donor->donor_name = request('donor_name');
+                $donor->donor_location = request('donor_location');
+                $donor->tel_no = request('telephone_number');
+                $donor->donor_email = request('email');
+                $donor->donor_product = request('product');
+                $donor->save();
+            return redirect()->route('admin_input_donor')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
+            }
+// end
                             // ORDER INPUTS
 // start
             // Load the Page
@@ -196,6 +207,46 @@ class AdminController extends Controller
                 }
             //END
             
+
+
+
+
+// **********************INPUT DONATIONS IN ADMIN
+
+              public function input_donations()
+    {
+      return view('Admin/donationsadmin');
+    }
+    public function push_towards_form()
+    {
+        $donations = new Donation();
+        $donations->donor_name  = request('donor_name');
+        $donations->description = request('description');
+        $donations->amount = request('amount');
+        $donations->save();
+    return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
+   }
+
+
+// VIEW DONATIONS TABLE
+
+// START
+                    
+ public function viewdonations()
+                        {
+                            $donations = DB::select('select * from donations');
+                            return view('Admin/viewdonations', ['donations'=>$donations]);
+                        }
+
+
+// CRUD DONATIONS TABLE
+
+
+
+
+
+                        
+
     /**
      * 
      * Show the form for creating a new resource.

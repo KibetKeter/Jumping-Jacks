@@ -54,6 +54,7 @@ Route::post('/admin/supplierinput/create', 'AdminController@push_to_form')->name
 // 3) Route to view Supplier table
 Route::get('/admin/supplierinput/table', 'AdminController@viewSupplier')->name('view_supplier');
 // 4) Edit Suppliers function
+<<<<<<< HEAD
 Route::get('admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
 Route::post('/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
 
@@ -68,6 +69,10 @@ Route::post('/admin/donorinput', 'AdminController@push_form')->name('admin_input
 Route::get('/admin/donorinput/table', 'AdminController@viewDonor')->name('view_donor');
 
          //ORDER
+=======
+Route::get('/admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
+Route::post('admin/supplierinput/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
+>>>>>>> 4a675521270a933e4694d9bbc2f3360db7fbaebd
 // // 5) Admin Register Order
 Route::get('/admin/orderinput', 'AdminController@input_order')->name('admin_input_order');
 // 6) Admin Order Push to DB
@@ -82,8 +87,12 @@ Route::post('admin/accountsedit/update/{id}', 'AdminController@updateAccounts')-
 
 
 // 4) Edit Orders function
-Route::get('admin/orderinput/click_edit/{id}', 'AdminController@editOrder')->name('admin_edit_order');
-Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
+Route::get('/admin/orderinput/click_edit/{id}', 'AdminController@editOrder')->name('admin_edit_order');
+Route::post('/admin/orderinput/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
+
+// 4) Delete Orders function
+Route::get('/admin/supplierinput/click_delete/{id}', 'AdminController@deleteSupplier')->name('admin_delete_supplier');
+// Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_order');
 
 // // 4) Route to get DB details
 // Route::get('/admin/supplierinput/table', 'AdminController@viewSupplier')->name('view_supplier');
@@ -97,4 +106,12 @@ Route::post('/update/{id}', 'AdminController@updateOrder')->name('admin_update_o
 // // 4)  Post Donor Details form to db route
 // Route::post('/admin/donorinput/create', 'AdminController@push_form')->name('input_donor.create');
 
+
+
+// Input Donations into the Admin dashboard
+Route::get('/admin/donationsadmin', 'AdminController@input_donations')->name('input_donations');
+Route::post('/generaluser/donationsadmin/create', 'AdminController@push_towards_form')->name('input_donations.create');
+
+// Route to view Donations table
+Route::get('/admin/donationsadmin/table', 'AdminController@viewdonations')->name('view_donations');
 

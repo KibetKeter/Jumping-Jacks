@@ -113,8 +113,9 @@
                       
                       
                         <br/>
-                        <button type="button" class="btn btn-primary">Record donations</button>
-                        <button type="button" class="btn btn-primary">View donations</button>
+                        <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Record donations</a><br/>
+                      <a href="{{url('/admin/donationsadmin/table') }}" type="button" class="btn btn-primary">View donations</a>
+                       
                         <button type="button" class="btn btn-primary">Edit donations</button>
                         
 
