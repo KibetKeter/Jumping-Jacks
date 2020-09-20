@@ -120,8 +120,8 @@ class AdminController extends Controller
             // Edit Donor
             public function editDonor($id)
                         {
-                            $donor = DB::select('select * from donor__accounts where id = ?', [$id]);
-                            return view ('Admin/donoredit' , ['donor__accounts'=>$donor]);
+                            $donor__accounts = DB::select('select * from donor__accounts where id = ?', [$id]);
+                            return view ('Admin/donoredit' , ['donor__accounts'=>$donor__accounts]);
                         }
             public function updateDonor(Request $request,$id)
                     {
@@ -133,6 +133,13 @@ class AdminController extends Controller
                         DB::UPDATE('update donor__accounts set donor_name=?, donor_location=?, tel_no=?, donor_email=?, donor_product=? where id=?',[$updated_donor_name,$updated_donor_location, $updated_donor_telephone, $updated_donor_email, $updated_donor_product, $id]);
                          return redirect()->route('view_donor')->withSuccess(['Donor has been Edited Successfully👍🏿']);
                     }
+
+            //DELETE
+            public function deleteDonor($id)
+                        {
+                            DB::delete('delete from donor__accounts where id =?',[$id]);
+                            return redirect()->route('view_donor')->withSuccess(['Donor has been Deleted Successfully👍🏿']);
+                       }       
 
 // end
                             // ORDER INPUTS

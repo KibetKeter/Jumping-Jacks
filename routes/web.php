@@ -69,7 +69,9 @@ Route::post('/admin/donorinput', 'AdminController@push_form')->name('admin_input
 Route::get('/admin/donorinput/table', 'AdminController@viewDonor')->name('view_donor');
 //4) Edit donor
 Route::get('admin/donorinput/click_edit/{id}', 'AdminController@editDonor')->name('admin_edit_donor');
-Route::post('/update/{id}', 'AdminController@updateDonor')->name('admin_update_donor');
+Route::post('admin/donorinput/update/{id}', 'AdminController@updateDonor')->name('admin_update_donor');
+//5) Delete Donoe
+Route::get('/admin/donorinput/click_delete/{id}', 'AdminController@deleteDonor')->name('admin_donor_supplier');
 
          //ORDER
 
