@@ -67,7 +67,6 @@ This is the accounts edit page
 										</div>
                                         </div>
         <button type="submit" class="btn btn-round btn-danger">Update</button>
-		<a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">Back to order table</a>
         <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to  Admin Dashboard</a>
- 
+		<a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">Back to order table</a>
 @endsection
