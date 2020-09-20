@@ -108,6 +108,32 @@ class AdminController extends Controller
                 $donor->save();
             return redirect()->route('admin_input_donor')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
             }
+            
+
+            // View donor inputs
+            public function viewDonor()
+            {
+                $donor = DB::select('select * from donor__accounts');
+                return view('Admin/viewdonor', ['donor__accounts'=>$donor]);
+            }
+
+            // Edit Donor
+            public function editDonor($id)
+                        {
+                            $donor = DB::select('select * from donor__accounts where id = ?', [$id]);
+                            return view ('Admin/donoredit' , ['donor__accounts'=>$donor]);
+                        }
+            public function updateDonor(Request $request,$id)
+                    {
+                        $updated_donor_name = $request->input('donor_name');
+                        $updated_donor_location = $request->input('donor_location');
+                        $updated_donor_telephone= $request->input('tel_no');
+                        $updated_donor_email = $request->input('donor_email');
+                        $updated_donor_product = $request->input('donor_product');
+                        DB::UPDATE('update donor__accounts set donor_name=?, donor_location=?, tel_no=?, donor_email=?, donor_product=? where id=?',[$updated_donor_name,$updated_donor_location, $updated_donor_telephone, $updated_donor_email, $updated_donor_product, $id]);
+                         return redirect()->route('view_donor')->withSuccess(['Donor has been Edited Successfully👍🏿']);
+                    }
+
 // end
                             // ORDER INPUTS
 // start

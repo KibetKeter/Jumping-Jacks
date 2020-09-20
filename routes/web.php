@@ -54,7 +54,7 @@ Route::post('/admin/supplierinput/create', 'AdminController@push_to_form')->name
 // 3) Route to view Supplier table
 Route::get('/admin/supplierinput/table', 'AdminController@viewSupplier')->name('view_supplier');
 // 4) Edit Suppliers function
-<<<<<<< HEAD
+
 Route::get('admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
 Route::post('/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
 
@@ -67,12 +67,15 @@ Route::post('/admin/donorinput', 'AdminController@push_form')->name('admin_input
 
 // 3) Route to view donor table
 Route::get('/admin/donorinput/table', 'AdminController@viewDonor')->name('view_donor');
+//4) Edit donor
+Route::get('admin/donorinput/click_edit/{id}', 'AdminController@editDonor')->name('admin_edit_donor');
+Route::post('/update/{id}', 'AdminController@updateDonor')->name('admin_update_donor');
 
          //ORDER
-=======
+
 Route::get('/admin/supplierinput/click_edit/{id}', 'AdminController@editSupplier')->name('admin_edit_supplier');
 Route::post('admin/supplierinput/update/{id}', 'AdminController@updateSupplier')->name('admin_update_supplier');
->>>>>>> 4a675521270a933e4694d9bbc2f3360db7fbaebd
+
 // // 5) Admin Register Order
 Route::get('/admin/orderinput', 'AdminController@input_order')->name('admin_input_order');
 // 6) Admin Order Push to DB

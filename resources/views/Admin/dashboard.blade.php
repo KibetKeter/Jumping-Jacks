@@ -54,9 +54,8 @@
                         <br/>
                         <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register donor details</a><br/>
                         <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Current Donor </a><br/>
-                        <button type="button" class="btn btn-primary">Edit donor details</button>
-
-                        
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">Edit Donor</a>
+                        <br/> 
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
