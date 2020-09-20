@@ -24,10 +24,12 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                      <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date</p>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register suppliers</a><br/>
-                      <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
-                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
+                      <p> This section is used to Create Update and Delete the Suppliers Details</p><br/>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-success">Register Supplier</a>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-success">View Supplier</a>
+                        <br>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Supplier</a>
+                        <a href= "{{url('/admin/supplierinput/table') }}" class="btn btn-rectangle btn-danger">Delete a Supplier</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -76,14 +78,11 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to update the amount of stock available within the company.
-                        <br/>
-                        <br/>
-                        
-                        <br/>
-                        
-                        <button type="button" class="btn btn-primary">Record stock details</button>
-                        <button type="button" class="btn btn-primary">Edit stock details</button>
+                        <p> This section is used to Create Update and Delete the Stock Details</p><br/>                                  
+                        <button  type="button" class="btn btn-success">Record Stock</button>
+                        <button type="button" class="btn btn-success">View Stock</button>
+                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Stock</button>
+                        <button class="btn btn-rectangle btn-danger">Delete Stock</button>
 
                         
 
@@ -107,16 +106,11 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                       <p> This section is used to input any donations given by various donors.
-                       <br/>
-                      
-                      
-                        <br/>
-                        <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Record donations</a><br/>
-                      <a href="{{url('/admin/donationsadmin/table') }}" type="button" class="btn btn-primary">View donations</a>
-                       
-                        <button type="button" class="btn btn-primary">Edit donations</button>
-                        
+                    <p> This section is used to Create Update and Delete the Donations</p><br/>                                  
+                        <a  href = "{{url('/admin/donationsadmin')}}"type="button" class="btn btn-success">Record Donation</a>
+                        <a href="{{url('/admin/donationsadmin/table')}}" class="btn btn-success">View Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}" type="button" class= "btn btn-rectangle btn-warning">Edit Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}"class="btn btn-rectangle btn-danger">Delete Donation</a>
 
 
             </div>
@@ -137,13 +131,13 @@
                                         </div>
                                       
                                           <div class="x_content">
-                                            
-                                              <p> This section is used to order materials that may be required by the company.
-                                              
-                                          </div>
-                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
-                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">View Order Table</a>
-                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">Edit Orders</a>
+                                               <p> This section is used to Create Update and Delete Orders</p><br/>            
+                                           </div>
+                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-success">Register Order</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">View Orders</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Orders</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" class="btn btn-rectangle btn-danger">Delete Order</a>
+
                                 </div>
                               </div>
                  
@@ -156,19 +150,18 @@
             <div class="col-md-4 col-sm-4 ">
                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                             <div class="x_title">
-                                <h2>View Current Stock 📥</h2>
+                                <h2>Manage Accounts💰</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                       </li>
                                     </ul>
                                 <div class="clearfix"></div>
                           </div>
-                             <div class="x_content">
-                                <p> This section is used to update the amount of stock available within the company.<br/> 
-                               <br/>
-                             
-                                <br/>
-                                <button type="button" class="btn btn-secondary">Click to view inventory</button>
+                            <div class="x_content">
+                              <p>This section is used to view account details in the company.</p><br/>
+                            </div>
+                        
+                              <a href="{{ route('view_accounts')}} " type="button" class="btn btn-success">Manage Order Transaction</a>
                     </div>
                             </div>
                           </div>
@@ -176,31 +169,6 @@
               </p>
             </div>
           </div>
-              <!--End of Second Tile -->
-
-                <!-- Second  Tile -->
-          <div>
-                <div class="x_panel tile fixed_height_320 overflow_hidden">
-                            <div class="x_title">
-                                <h2>View Accounts 💰 </h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                      </li>
-                                    </ul>
-                                <div class="clearfix"></div>
-                          </div>
-                             <div class="x_content">
-                                <p> This section is used to view account details in the company.<br/> 
-                               <br/>
-                               <br/> 
-                                <strong>Click to view table</strong></p>
-                                <br/>
-                                <br/>
-                                <a href="{{ route('view_accounts')}} " type="button" class="btn btn-primary">View Accounts</a>
-                    </div>
-                            </div>
-                          </div>
-                </div>
               <!--End of Second Tile -->
               <!-- For copy and Pasting for the Admin Functionalities -->
               <!--  Extra Tile-->

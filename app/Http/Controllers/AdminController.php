@@ -153,20 +153,18 @@ class AdminController extends Controller
                         $order->item_ordered = request('order_item');
                         $order->quantity = request('quantity');
                         $order->delivery_date = request('delivery');
+                        $order->amount= request('amount');
                         $order->save();
                     
                         $accounts = new Supplier_Accounts();
                         $accounts->supplier_name = request('supplier_name');
                         $accounts->item_ordered = request('order_item');
                         $accounts->quantity = request('quantity');
+                        $accounts->amount= request('amount');
                         $accounts->save();
 
                         return redirect()->route('admin_input_order')->withSuccess(['Order has been Registered Successfully👍🏿']);
-                        
-                
-                }
-
-
+                    }
             //END
                     
 
@@ -178,6 +176,16 @@ class AdminController extends Controller
                     return view('Admin/vieworder', ['orders'=>$orders]);
                 }
     // END
+
+                // DELETE SUPPLIER TABLE
+ //START 
+            public function deleteOrder($id)
+            {
+                DB::delete('delete from orders where id =?',[$id]);
+                return redirect()->route('view_order')->withSuccess(['Order has been Deleted Successfully👍🏿']);
+            }                       
+
+// END
 
              // VIEW ACCOUNTS CONTROLLER
 
@@ -198,12 +206,12 @@ class AdminController extends Controller
 
      public function updateAccounts(Request $request,$id)
      { 
-                    $updated_accounts_name = $request->input('supplier_name');
-                    $updated_accounts_itemordered = $request->input('item_ordered');
-                    $updated_accounts_quantity= $request->input('quantity');
+                    // $updated_accounts_name = $request->input('supplier_name');
+                    // $updated_accounts_itemordered = $request->input('item_ordered');
+                    // $updated_accounts_quantity= $request->input('quantity');
                     $updated_delivery_status= $request->input('status');
-                    DB::UPDATE('update supplier__accounts set supplier_name=?, item_ordered=?, quantity=?, notDelivered=? where id=?',
-                    [$updated_accounts_name, $updated_accounts_itemordered, $updated_accounts_quantity, $updated_delivery_status, $id]);
+                    DB::UPDATE('update supplier__accounts set notDelivered=? where id=?',
+                    [$updated_delivery_status, $id]);
                     return redirect()->route('view_accounts')->withSuccess('success','Data Updated');
      }
 // END
@@ -222,20 +230,16 @@ class AdminController extends Controller
 // ********************UPDATE ORDER TABLE
             // START
                 public function updateOrder(Request $request,$id)
-                {
-                    $updated_orders_name = $request->input('supplier_name');
-                    $updated_orders_itemordered = $request->input('item_ordered');
-                    $updated_orders_quantity= $request->input('quantity');
-                    $updated_orders_delivery = $request->input('delivery_date');
-                    DB::UPDATE('update orders set supplier_name=?, item_ordered=?, quantity=?, delivery_date=? where id=?',
-                    [$updated_orders_name, $updated_orders_itemordered, $updated_orders_quantity, $updated_orders_delivery, $id]);
-                    return redirect()->route('view_order')->withSuccess('success','Data Updated');
-                }
-            //END
-            
-
-
-
+                    {
+                        $updated_orders_name = $request->input('supplier_name');
+                        $updated_orders_itemordered = $request->input('item_ordered');
+                        $updated_orders_quantity= $request->input('quantity');
+                        $updated_orders_delivery = $request->input('delivery_date');
+                        DB::UPDATE('update orders set supplier_name=?, item_ordered=?, quantity=?, delivery_date=? where id=?',
+                        [$updated_orders_name, $updated_orders_itemordered, $updated_orders_quantity, $updated_orders_delivery, $id]);
+                        return redirect()->route('view_order')->withSuccess(['Order has been Updated Successfully👍🏿']);
+                    }
+//END
 
 // **********************INPUT DONATIONS IN ADMIN
 

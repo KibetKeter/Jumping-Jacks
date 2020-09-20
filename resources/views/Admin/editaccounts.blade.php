@@ -29,7 +29,7 @@ This is the accounts edit page
                                                 <label class="col-form-label col-md-3 col-sm-3 label-align" for="heard"><strong>Supplier:</strong></label>
 
                                                 <div class="col-md-6 col-sm-6 ">
-                                                <input name="supplier_name" type="text" id="first-name"  value= "{{ $accounts[0] ->supplier_name}}" required="required" class="form-control ">
+                                                <input name="supplier_name" type="text" id="first-name"  value= "{{ $accounts[0] ->supplier_name}}" required="required" class="form-control" disabled>
 
                                                    
                                                 </div>
@@ -38,7 +38,7 @@ This is the accounts edit page
                                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><strong>Item to be supplied</strong><span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 ">
-                                                <input name="item_ordered" type="text" id="first-name"  value= "{{ $accounts[0] ->item_ordered}}" required="required" class="form-control ">
+                                                <input name="item_ordered" type="text" id="first-name"  value= "{{ $accounts[0] ->item_ordered}}" required="required" class="form-control" disabled>
                                             </div>
                                         </div>
 
@@ -46,7 +46,7 @@ This is the accounts edit page
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><strong>Quantity of Supply</strong><span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input name="quantity" type="text" id="first-name" value= "{{ $accounts[0] ->quantity}}"  required="required" class="form-control ">
+												<input name="quantity" type="text" id="first-name" value= "{{ $accounts[0] ->quantity}}"  required="required" class="form-control" disabled>
 											</div>
 										</div>
 
@@ -67,6 +67,7 @@ This is the accounts edit page
 										</div>
                                         </div>
         <button type="submit" class="btn btn-round btn-danger">Update</button>
+		<a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">Back to order table</a>
         <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to  Admin Dashboard</a>
  
 @endsection

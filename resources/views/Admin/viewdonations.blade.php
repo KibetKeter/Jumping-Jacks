@@ -24,7 +24,8 @@
                           <th>Amount</th>
                           <th>Created at</th>
                           <th>Updated at</th>
-                          <th></th>
+                          <th>Edit</th>
+                          <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -37,16 +38,19 @@
                                 <td>{{$row->created_at}}</td>
                                 <td>{{$row->updated_at }}</td>
                                 <td>
-                                    <a href= "click_edit/{{ $row->id }} " class= "btn btn-info">Edit</a>
+                                    <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
+                                </td>
+                                <td>
+                                    <a  class="btn btn-round btn-danger">Delete</a>
                                 </td>
                               </tr>
-                              
                         @endforeach
                       </tbody>
                     </table>
                     <br/>
-                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Record a Donation</a><br/>
-                    <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to Previous Page</a>
+                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                    <a href="{{url('/admin')}}" class="btn btn-secondary" type="button">Back to Admin Dashboard Page</a>
+                   
                   </div>
                 </div>
               </div>
