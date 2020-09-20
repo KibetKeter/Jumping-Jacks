@@ -18,6 +18,7 @@ class CreateSupplierAccountsTable extends Migration
             $table->string('supplier_name');
             $table->string('item_ordered');
             $table->string('quantity');
+            $table->integer('amount');
             $table->boolean('notDelivered')->default(true); 
             $table->timestamps();
         });

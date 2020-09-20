@@ -43,21 +43,19 @@
 											<input type="text" id="amount" name="amount" required="required" class="form-control" placeholder="Input numbers only!">
 										</div>
                                     </div>
-<div class = "container">
-<div class="ln_solid"></div>
-	<div class="item form-group">
-											
-<a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to previous page</a>
-<button class="btn btn-primary" type="reset">Reset form</button>
-<button type="submit" class="btn btn-success">Submit</button>
-
-
-												</div>
+						<div class = "container">
+							<div class="ln_solid"></div>
+								<div class="item form-group">
+												<button type="submit" class="btn btn-round btn-primary">Submit Donations</button>
+												<button class="btn btn-round btn-danger" type="reset">Reset Form</button>
+												<a href = "{{url('/admin/donationsadmin/table')}}"class="btn btn-round btn-success">View Donation</a>
+												<a href="{{url('/admin')}}" class="btn btn-warning"> Back to Admin Dashboard</a>						
+								</div>
 
 
    
-											</div>
-											</div>
+							</div>
+						</div>
 										</div>
 
 									</form>

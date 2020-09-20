@@ -54,6 +54,14 @@
 										</div>
 
 										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><strong>Cost of Order</strong><span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="amount" name="amount" required="required" class="form-control" placeholder="Input numbers only!">
+											</div>
+										</div>
+
+										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name"><strong>Expected day of delivery</strong><span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
@@ -76,10 +84,11 @@
 									<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button type="submit" class="btn btn-success">Submit the Order</button><br/>
-												<button class="btn btn-primary" type="reset">Reset the form</button>
-												<a href="{{url('/admin/orderinput/table')}}" type="button" class="btn btn-primary">View Orders Table</a><br/>
-												<a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to Admin Dashboard</a><br/>
+												<button type="submit" class="btn btn-round btn-primary">Submit the form</button><br/>
+												<button class="btn btn-round btn-danger" type="reset">Reset the form</button>
+												<a href="{{url('/admin/orderinput/table')}}" type="button" class="btn btn-round btn-success">View Orders table</a><br/>
+												<a href="{{url('/admin')}}" class="btn btn-warning" type="button">Back to Admin Dashboard</a><br/>
+												
 											</div>
 										</div>
 

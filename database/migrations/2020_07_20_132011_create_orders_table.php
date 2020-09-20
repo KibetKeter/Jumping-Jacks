@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('item_ordered');
             $table->string('quantity');
             $table->date('delivery_date');
+            $table->integer('amount');
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Suppliers Registered in the Database<small>Users</small></h2>
+                    <h2>Suppliers Registered in the Database</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -65,7 +65,7 @@
                     </table>
                     <br/>
                     <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register a Supplier</a><br/>
-                    <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to General User Page</a>
+                    <a href="{{url('/generaluser')}}" class="btn btn-secondary" type="button">Back to Admin Dashboard Page</a>
                   </div>
                 </div>
               </div>
