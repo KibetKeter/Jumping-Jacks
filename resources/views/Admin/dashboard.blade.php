@@ -25,10 +25,11 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                       <p> This section is used to Create Update and Delete the Suppliers Details</p><br/>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Supplier</a>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-success">Register Supplier</a>
                         <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-success">View Supplier</a>
-                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class= "btn btn-round btn-warning">Edit Supplier</a>
-                        <a href= "{{url('/admin/supplierinput/table') }}" class="btn btn-round btn-danger">Delete a Supplier</a>
+                        <br>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Supplier</a>
+                        <a href= "{{url('/admin/supplierinput/table') }}" class="btn btn-rectangle btn-danger">Delete a Supplier</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -52,10 +53,10 @@
                     <div class="x_content">
                         <p>This section is used to Create,Update and Delete the Donors Details</p>
                         <br>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Record Donor</a>
+                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-success">Record Donor</a>
                         <button type="button" class="btn btn-success">View Donors</button>
-                        <button type="button" class= "btn btn-round btn-warning">Edit Donors</button>
-                        <button href= "{{url('/admin/supplierinput/table') }}" class="btn btn-round btn-danger">Delete Donor</button>
+                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Donors</button>
+                        <button href= "{{url('/admin/supplierinput/table') }}" class="btn btn-rectangle btn-danger">Delete Donor</button>
                         
                     </div>
                   <!-- End of the content of the Tile -->
@@ -78,10 +79,10 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                         <p> This section is used to Create Update and Delete the Stock Details</p><br/>                                  
-                        <button  type="button" class="btn btn-primary">Record Stock</button>
+                        <button  type="button" class="btn btn-success">Record Stock</button>
                         <button type="button" class="btn btn-success">View Stock</button>
-                        <button type="button" class= "btn btn-round btn-warning">Edit Stock</button>
-                        <button class="btn btn-round btn-danger">Delete Stock</button>
+                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Stock</button>
+                        <button class="btn btn-rectangle btn-danger">Delete Stock</button>
 
                         
 
@@ -106,10 +107,10 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                     <p> This section is used to Create Update and Delete the Donations</p><br/>                                  
-                        <a  href = "{{url('/admin/donationsadmin')}}"type="button" class="btn btn-primary">Record Donation</a>
+                        <a  href = "{{url('/admin/donationsadmin')}}"type="button" class="btn btn-success">Record Donation</a>
                         <a href="{{url('/admin/donationsadmin/table')}}" class="btn btn-success">View Donation</a>
-                        <a href = "{{url('/admin/donationsadmin/table')}}" type="button" class= "btn btn-round btn-warning">Edit Donation</a>
-                        <a href = "{{url('/admin/donationsadmin/table')}}"class="btn btn-round btn-danger">Delete Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}" type="button" class= "btn btn-rectangle btn-warning">Edit Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}"class="btn btn-rectangle btn-danger">Delete Donation</a>
 
 
             </div>
@@ -132,10 +133,10 @@
                                           <div class="x_content">
                                                <p> This section is used to Create Update and Delete Orders</p><br/>            
                                            </div>
-                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register Order</a>
+                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-success">Register Order</a>
                                           <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">View Orders</a>
-                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class= "btn btn-round btn-warning">Edit Orders</a>
-                                          <a href="{{url('/admin/orderinput/table') }}" class="btn btn-round btn-danger">Delete Order</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Orders</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" class="btn btn-rectangle btn-danger">Delete Order</a>
 
                                 </div>
                               </div>
