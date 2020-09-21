@@ -15,6 +15,11 @@ class CreateSupplierAccountsTable extends Migration
     {
         Schema::create('supplier__accounts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('supplier_name');
+            $table->string('item_ordered');
+            $table->string('quantity');
+            $table->integer('amount');
+            $table->boolean('notDelivered')->default(true); 
             $table->timestamps();
         });
     }

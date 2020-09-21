@@ -8,7 +8,7 @@
             {{ session('status') }}
         </div>
     @endif
-    <strong>You are an Admin🚓👮🏿‍♂️👮🏿‍♀️</strong>
+   <h5> You have administrator rights </h5>
 </div>
 <div class="row">
     <!-- First Tile -->
@@ -16,7 +16,7 @@
         <div class="x_panel tile fixed_height_320">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Supplier Details🚚</h2>
+                        <h2>Supplier 🚚</h2>
                               <ul>
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                               </ul>
@@ -24,10 +24,12 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                      <p> This section is used to update the Suppliers Details. This is crucial in ensuring the Supplier Details are up to date</p>
-                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-primary">Register Now😀</a><br/>
-                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">View Suppliers</a><br/>
-                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-primary">Edit Suppliers</a>
+                      <p> This section is used to Create Update and Delete the Suppliers Details</p><br/>
+                        <a href="{{url('/admin/supplierinput') }}" type="button" class="btn btn-success">Register Supplier</a>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class="btn btn-success">View Supplier</a>
+                        <br>
+                        <a href="{{url('/admin/supplierinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Supplier</a>
+                        <a href= "{{url('/admin/supplierinput/table') }}" class="btn btn-rectangle btn-danger">Delete a Supplier</a>
                         <br/>
                     </div>
                   <!-- End of the content of the Tile -->
@@ -40,7 +42,7 @@
         <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Donor Details🤵🏿</h2>
+                        <h2>Donors 🤵🏿</h2>
                             <ul>
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -49,12 +51,13 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to update the Donors Details. We as a company value our Donors alot.
-                        For this reason we take a lot of pride in ensuring our donors list and details are always up to date. 
-                        <br/> <strong>Click the button below to Update and Register a new Donor Respectively</strong></p>
-                        <br/>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-primary">Register</a>
+                        <p> This section is used to update the Donors Details. All donors that donate to the company are recorded here. 
                         
+                        <br/>
+                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register donor details</a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Current Donor </a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">Edit Donor</a>
+                        <br/> 
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -66,7 +69,7 @@
         <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
-                        <h2>Input Stock📦</h2>
+                        <h2> Stock 📦</h2>
                             <ul>
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -75,14 +78,14 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to update the amount of stock available within the company.
-                        <br/>
-                        <br/>
-                        <strong>Click the button below to input the amount of stock brought in by the supplier</strong></p>
-                        <br/>
-                        <br/>
-                        <button type="button" class="btn btn-secondary">Update</button>
-                        <button type="button" class="btn btn-primary">Register</button>
+                        <p> This section is used to Create Update and Delete the Stock Details</p><br/>                                  
+                        <button  type="button" class="btn btn-success">Record Stock</button>
+                        <button type="button" class="btn btn-success">View Stock</button>
+                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Stock</button>
+                        <button class="btn btn-rectangle btn-danger">Delete Stock</button>
+
+                        
+
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
@@ -103,15 +106,14 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                       <p> This section is used to input the donations given by the donors.
-                       <br/>
-                       </br>
-                       <strong>Click the button below to input the donations</strong></p>
-                        <br/>
-                        <br/>
-                        <button type="button" class="btn btn-secondary">Update</button>
-                        <button type="button" class="btn btn-primary">Register</button>
-                    </div>
+                    <p> This section is used to Create Update and Delete the Donations</p><br/>                                  
+                        <a  href = "{{url('/admin/donationsadmin')}}"type="button" class="btn btn-success">Record Donation</a>
+                        <a href="{{url('/admin/donationsadmin/table')}}" class="btn btn-success">View Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}" type="button" class= "btn btn-rectangle btn-warning">Edit Donation</a>
+                        <a href = "{{url('/admin/donationsadmin/table')}}"class="btn btn-rectangle btn-danger">Delete Donation</a>
+
+
+            </div>
                   <!-- End of the content of the Tile -->
           </div>
         </div>
@@ -129,45 +131,44 @@
                                         </div>
                                       
                                           <div class="x_content">
-                                            <h4>Brief Explanation of this Section</h4>
-                                              <p> This section is used to order materials that may be required by the company to disrtribute. e.g.<i>If the company
-                                              wants to buy flour, they will need to make an order to the Maize Milling Company registered as a Supplier in the system</i> 
-                                              .<br/><strong> Click the button below to update</strong></p>
-                                          </div>
-                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
-                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-primary">View Order Table</a>
-                                          <a href="" type="button" class="btn btn-primary">Edit Suppliers</a>
+                                               <p> This section is used to Create Update and Delete Orders</p><br/>            
+                                           </div>
+                                          <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-success">Register Order</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">View Orders</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Orders</a>
+                                          <a href="{{url('/admin/orderinput/table') }}" class="btn btn-rectangle btn-danger">Delete Order</a>
+
                                 </div>
                               </div>
-                  </div>
-                <br/>
-                <br/>
+                 
   <!-- End of Fifth Tile -->
+  
 
   <!-- For copy and Pasting for the Admin Functionalities -->
   <!-- Second  Tile -->
-          <div>
+         
+            <div class="col-md-4 col-sm-4 ">
                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                             <div class="x_title">
-                                <h2>View all Current Stock📥</h2>
+                                <h2>Manage Accounts💰</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                       </li>
                                     </ul>
                                 <div class="clearfix"></div>
                           </div>
-                             <div class="x_content">
-                                <p> This section is used to update the amount of stock available within the company.<br/> 
-                               <br/>
-                               <br/> 
-                                <strong>Click to view table</strong></p>
-                                <br/>
-                                <br/>
-                                <button type="button" class="btn btn-secondary">Click me!😏</button>
+                            <div class="x_content">
+                              <p>This section is used to view account details in the company.</p><br/>
+                            </div>
+                        
+                              <a href="{{ route('view_accounts')}} " type="button" class="btn btn-success">Manage Order Transaction</a>
                     </div>
                             </div>
                           </div>
                 </div>
+              </p>
+            </div>
+          </div>
               <!--End of Second Tile -->
               <!-- For copy and Pasting for the Admin Functionalities -->
               <!--  Extra Tile-->

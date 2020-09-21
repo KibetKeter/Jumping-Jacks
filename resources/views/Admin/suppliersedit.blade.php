@@ -3,7 +3,7 @@
 <div class="x_panel">
                   <h2>Edit Supplier Details</h2>
 </div>
-                            <form action= "/update/{{ $suppliers[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                            <form action= "/admin/supplierinput/update/{{ $suppliers[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
                                             <div class="item form-group">
                                                 <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Supplier Name <span class="required">*</span>
