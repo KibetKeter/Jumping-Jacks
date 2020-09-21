@@ -49,7 +49,7 @@
                       </tbody>
                     </table>
                     <br/>
-                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Record Donation</a><br/>
                     <a href="{{url('/admin')}}" class="btn btn-secondary" type="button">Back to Admin Dashboard Page</a>
                    
                   </div>
