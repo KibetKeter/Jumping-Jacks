@@ -42,12 +42,7 @@ class StockController extends Controller
                     $stock->best_before_date = request('best_before_date');
                     $stock->description = request('description');
                     $stock->save();
-<<<<<<< HEAD
-                  return redirect()->route('GeneralUser.stock')->withSuccess(['Stock Updated Successfully👍🏿']);
-                  //<a href= "{{route('stock')}}" ->withSuccess 'Stock Updated Successfully👍🏿'>;
-=======
                   return redirect()->route('stock')->withSuccess(['Stock Updated Successfully👍🏿']);
->>>>>>> 37705eac326a10e822c58533d325215171c46779
                 }
 // end
                    // VIEW STOCK TABLE CONTROLLER
