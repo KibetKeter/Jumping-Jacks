@@ -51,13 +51,13 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p>This section is used to Create,Update and Delete the Donors Details</p>
-                        <br>
-                        <a href="{{url('/generaluser/donorinput') }}" type="button" class="btn btn-success">Record Donor</a>
-                        <button type="button" class="btn btn-success">View Donors</button>
-                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Donors</button>
-                        <button href= "{{url('/admin/supplierinput/table') }}" class="btn btn-rectangle btn-danger">Delete Donor</button>
+                        <p> This section is used to update the Donors Details. All donors that donate to the company are recorded here. 
                         
+                        <br/>
+                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register donor details</a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Current Donor </a><br/>
+                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">Edit Donor</a>
+                        <br/> 
                     </div>
                   <!-- End of the content of the Tile -->
           </div>
