@@ -51,12 +51,13 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to update the Donors Details. All donors that donate to the company are recorded here. 
+                        <p> This section is used to update the Donors Details. All donors that donate to the company are recorded here.</p> 
                         
                         <br/>
-                        <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register donor details</a><br/>
-                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Current Donor </a><br/>
-                        <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">Edit Donor</a>
+                          <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-success">Register Order</a>
+                          <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-success">View Orders</a>
+                          <a href="{{url('/admin/donorinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Orders</a>
+                          <a href="{{url('/admin/donorinput/table') }}" class="btn btn-rectangle btn-danger">Delete Order</a>
                         <br/> 
                     </div>
                   <!-- End of the content of the Tile -->
