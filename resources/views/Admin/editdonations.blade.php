@@ -1,13 +1,10 @@
 @extends('layouts.general')
 @section('content')
-<<<<<<< HEAD
-This is the edit donations page
-=======
 <div class="x_panel">
                   <h2>Edit Donations Details</h2>
 </div>
                             <form action= "/admin/donationsadmin/update/{{ $donations[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                                @csrf
                             	<div class="item form-group">
                                                 <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Donor Name <span class="required">*</span>
                                                 </label>
@@ -36,5 +33,4 @@ This is the edit donations page
                                      <button type="submit" class="btn btn-rectangle btn-danger">Update</button>  
                                       </div>    
                                 </form>										</div>
->>>>>>> 721a0ce7fdc533ea066e5b8699bb732ca5a4aabd
 @endsection
