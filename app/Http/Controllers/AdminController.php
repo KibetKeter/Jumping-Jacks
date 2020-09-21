@@ -193,7 +193,7 @@ class AdminController extends Controller
 
               public function input_donations()
     {
-      return view('Admin/donationsadmin');
+      return view('admin/donationsadmin');
     }
     public function push_towards_form()
     {
@@ -219,12 +219,35 @@ class AdminController extends Controller
 
 // CRUD DONATIONS TABLE
 
+//********************EDIT DONATIONS TABLE
+// START
+                    public function editdonations($id)
+                        {
+                            $donations = DB::select('select * from donations where id = ?', [$id]);
+                            return view ('Admin/editdonations' , ['donations' => $donations]);
+                        }
+// END
 
+ //********************UPDATE DONATIONS TABLE
+// START
+                    public function updatedonations(Request $request,$id)
+                        {
+                            $updated_donor_name = $request->input('donor_name');
+                            $updated_description = $request->input('description');
+                            $updated_amount= $request->input('amount');
+                    
+                            DB::UPDATE('update donations set donor_name=?, description=?, amount=? where id=?',[$updated_donor_name,$updated_description, $updated_amount, $id]);
+                            return redirect()->route('view_donations')->withSuccess(['Donations have been Edited Successfully👍🏿']);
+                        }
+//END
 
+          // DELETE DATA FROM DONATIONS COLUMN
 
-
-                        
-
+public function deletedonations($id)
+                        {
+                            DB::delete('delete from donations where id =?',[$id]);
+                            return redirect()->route('view_donations')->withSuccess(['Supplier has been Deleted Successfully👍🏿']);
+                       }                       
     /**
      * 
      * Show the form for creating a new resource.

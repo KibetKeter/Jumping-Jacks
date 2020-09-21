@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Supplier; 
 use App\Donor_Accounts;
-use App\Donation;
+use App\Donationinput;
 use DB;
 
 class GeneralUserController extends Controller
@@ -73,7 +73,7 @@ public function input_donations()
     }
     public function push_towards_form()
     {
-        $donations = new Donation();
+        $donations = new Donationinput();
         $donations->donor_name  = request('donor_name');
         $donations->description = request('description');
         $donations->amount = request('amount');

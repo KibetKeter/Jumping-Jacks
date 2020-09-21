@@ -41,7 +41,8 @@
                                     <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
                                 </td>
                                 <td>
-                                    <a  class="btn btn-round btn-danger">Delete</a>
+                                  <a href= "click_delete/{{ $row->id }} " class="btn btn-round btn-danger">Delete</a>
+                                  
                                 </td>
                               </tr>
                         @endforeach

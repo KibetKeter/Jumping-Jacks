@@ -90,3 +90,12 @@ Route::get('/admin/donationsadmin/table', 'AdminController@viewdonations')->name
 // 13) Delete Order Route
 Route::get('/admin/orderinput/click_delete/{id}', 'AdminController@deleteOrder')->name('admin_delete_order');
 
+
+
+
+// Route to edit Donations details
+Route::get('/admin/donationsadmin/click_edit/{id}', 'AdminController@editdonations')->name('admin_edit_donations');
+Route::post('admin/donationsadmin/update/{id}', 'AdminController@updatedonations')->name('admin_update_donations');
+
+// 10) Delete Donations function
+Route::get('/admin/donationsadmin/click_delete/{id}', 'AdminController@deletedonations')->name('admin_delete_donations');
