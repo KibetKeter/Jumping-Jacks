@@ -21,6 +21,7 @@
 											</ul>
 										</div>
 										@endif
+										
 									<form action="{{ route('admin_input_order.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
                                             <div class="item form-group">
@@ -87,5 +88,4 @@
 							</div>
 						</div>
 					</div>
-
 @endsection
