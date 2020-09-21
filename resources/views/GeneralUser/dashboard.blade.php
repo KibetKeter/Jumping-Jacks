@@ -75,7 +75,12 @@
                         <br/>
                         <br/>
                         <!----<button type="button" class="btn btn-secondary">Update</button> -->
-                        <a href = "{{ url ('/generaluser/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a>
+
+                        <a href="{{url('/generaluser/stock') }}" type="button" class="btn btn-primary">Record Stock details</a>
+                       <!---- <button type="button" class="btn btn-primary">Record Stock Details</button> -->
+
+                        <!---<a href = "{{ url ('/generaluser/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a> ----->
+
                     </div>
                   <!-- End of the content of the Tile -->
           </div>

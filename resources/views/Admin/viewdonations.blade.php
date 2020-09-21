@@ -41,14 +41,15 @@
                                     <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
                                 </td>
                                 <td>
-                                    <a  class="btn btn-round btn-danger">Delete</a>
+                                  <a href= "click_delete/{{ $row->id }} " class="btn btn-round btn-danger">Delete</a>
+                                  
                                 </td>
                               </tr>
                         @endforeach
                       </tbody>
                     </table>
                     <br/>
-                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Register an Order</a><br/>
+                    <a href="{{url('/admin/donationsadmin') }}" type="button" class="btn btn-primary">Record Donation</a><br/>
                     <a href="{{url('/admin')}}" class="btn btn-secondary" type="button">Back to Admin Dashboard Page</a>
                    
                   </div>
