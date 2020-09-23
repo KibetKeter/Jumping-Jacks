@@ -258,9 +258,9 @@ public function record_stock()
     return view('Admin/recordstock');
 }
 // Push to DB
-public function push_to_form()
+public function push_towards_form()
 {
-    $stocks = new Stock();
+    $stocks = new stock();
     $stocks->stock_type = request('stock_type');
     $stocks->stock_amount = request('stock_amount');
     $stocks->delivery_date = request('delivery_date');
@@ -302,7 +302,7 @@ public function updateStock(Request $request,$id)
 //END
 
 
-// DELETE SUPPLIER TABLE
+// DELETE STOCK TABLE
 //START
 public function deleteStock($id)
     {
