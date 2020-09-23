@@ -6,7 +6,7 @@ use App\Donor_Accounts;
 use App\Supplier_Accounts;
 use App\Orders;
 use App\Donation;
-use App\Stock;
+use App\Stocks;
 use Illuminate\Http\Request;
 use DB;
 
@@ -258,7 +258,7 @@ public function record_stock()
     return view('Admin/recordstock');
 }
 // Push to DB
-public function push_towards_form()
+public function push_to_the_form()
 {
     $stocks = new stock();
     $stocks->stock_type = request('stock_type');
