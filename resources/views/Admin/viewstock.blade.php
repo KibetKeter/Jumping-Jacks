@@ -25,6 +25,8 @@
                           <th>Description of the stock</th>
                           <th>Created At</th>
                           <th>Update At</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -38,6 +40,12 @@
                                 <td>{{$row->description}}</td>
                                 <td>{{$row->created_at}}</td>
                                 <td>{{$row->updated_at}}</td>
+                                <td>
+                                    <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
+                                </td>
+                                <td>
+                                    <a href= "click_delete/{{ $row->id }} " class="btn btn-round btn-danger">Delete</a>
+                                </td>
                         </tr>
                     @endforeach
                       <tbody>
@@ -45,7 +53,7 @@
                     </table>
                   
                   </div>
-                  <a href = "{{ url ('/admin/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a><br/>
+                  <a href = "{{ url ('/admin/stockinput')}}" type="button" class="btn btn-primary">Record Stock Details</a><br/>
                   <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to Dashboard</a>
                 </div>
               </div>

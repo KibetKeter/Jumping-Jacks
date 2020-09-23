@@ -6,7 +6,7 @@ use App\Donor_Accounts;
 use App\Supplier_Accounts;
 use App\Orders;
 use App\Donation;
-use App\Stocks;
+use App\Stock;
 use Illuminate\Http\Request;
 use DB;
 
@@ -190,7 +190,9 @@ class AdminController extends Controller
             public function deleteOrder($id)
             {
                 DB::delete('delete from orders where id =?',[$id]);
+                DB::delete('delete from supplier__accounts where id =?',[$id]);
                 return redirect()->route('view_order')->withSuccess(['Order has been Deleted Successfully👍🏿']);
+
             }
 
 // END
@@ -260,7 +262,7 @@ public function record_stock()
 // Push to DB
 public function push_to_the_form()
 {
-    $stocks = new stock();
+    $stocks = new Stock();
     $stocks->stock_type = request('stock_type');
     $stocks->stock_amount = request('stock_amount');
     $stocks->delivery_date = request('delivery_date');

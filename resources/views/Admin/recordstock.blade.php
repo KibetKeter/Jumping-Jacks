@@ -20,17 +20,17 @@
 											</ul>
 										</div>
                                     @endif
-									<form action="{{ route('stock.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+									<form action="{{ route('admin_input_stock.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
 
-                                 <div class="item form-group">
-                                           <div class="item form-group">
+                      
+                                           <!-- <div class="item form-group">
                                                 <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Stock ID <span class="required">*</span>
                                                 </label>
                                               <div class="col-md-6 col-sm-6 ">
                                                     <input name="id" type="text" id="first-name" required="required" class="form-control ">
                                                 </div> 
-                                            </div>
+                                            </div> -->
 
                                         <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="stock_type">Type of Stock<span class="required">*</span>
@@ -104,7 +104,7 @@
 												<a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to previous page</a>
 												<button class="btn btn-primary" type="reset">Reset</button>
 												<button type="submit" class="btn btn-success">Submit</button>
-												<a href = "{{ url('/admin/orderstock/table')}}" type="button" class="btn btn-secondary">Click to view Stock inventory</a>
+												<a href = "{{ url('/admin/stockview/table')}}" type="button" class="btn btn-secondary">Click to view Stock inventory</a>
 											</div>
 										</div>
 

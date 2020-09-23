@@ -1,6 +1,6 @@
 @extends('layouts.general')
 @section('content')
-This is the accounts edit page
+
 <div class="row">
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
@@ -23,22 +23,14 @@ This is the accounts edit page
 										</div>
 										@endif
                                       
-									<form   action="/admin/stockedit/update/{{ $accounts[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+									<form   action="/admin/stockinput/update/{{ $stocks[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
-                                            <div class="item form-group">
-                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="heard"><strong>Stock ID</strong></label>
-
-                                                <div class="col-md-6 col-sm-6 ">
-                                                <input name="supplier_name" type="text" id="first-name"  value= "{{ }}" required="required" class="form-control" disabled>
-
-                                                   
-                                                </div>
-                                            </div>                                        
+                                                                  
                                         <div class="item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><strong>Type of stock</strong><span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 ">
-                                                <input name="item_ordered" type="text" id="first-name"  value= "{{ }}" required="required" class="form-control" disabled>
+                                                <input name="item_ordered" type="text" id="first-name"  value="{{$stocks[0]->stock_type }}" required="required" class="form-control" disabled>
                                             </div>
                                         </div>
 
@@ -56,8 +48,7 @@ This is the accounts edit page
 											<div class="col-md-6 col-sm-6 ">
                                                 <select id = "supplier_name" name="status" class="form-control" required>
                                                         <option disabled selected>@if($accounts[0]->notDelivered == 1) <b> Not Delivered <b> @else Delivered @endif</option>
-                                                        <option value="0">Delivered</option>
-                                                        
+                                                        <option value="0">Delivered</option>      
                                                     </select>
                                             </div>
 										</div>

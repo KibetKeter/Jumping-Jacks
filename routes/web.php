@@ -112,14 +112,14 @@ Route::get('/admin/orderinput/click_delete/{id}', 'AdminController@deleteOrder')
 
 
 //14) Route to input stocks
-Route::get('/admin/stockinput', 'AdminController@input_Stock')->name('admin_input_stock');
+Route::get('/admin/stockinput', 'AdminController@record_stock')->name('admin_input_stock');
 //Admin stock push to db
-Route::post('/admin/stockinput/create', 'AdminController@push_to_form')->name('admin_input_stock.create');
+Route::post('/admin/stockinput/create', 'AdminController@push_to_the_form')->name('admin_input_stock.create');
 
 //Routes  to view stock
 Route::get('/admin/stockview/table','AdminController@viewStock')->name('view_stock');
 //Route to edit stock
-Route::get('/admin/stockview/edit', 'AdminController@editStock')->name('admin_edit_stock');
+Route::get('/admin/stockview/click_edit/{id}', 'AdminController@editStock')->name('admin_edit_stock');
 Route::post('/admin/stockinput/update{id}','AdminController@updateStock')->name('admin_update_stock');
 //Route to delete stocks
 Route::get('/admin/orderinput/click_delete{id}','AdminController@deleteStock')->name('admin_delete_stock');
