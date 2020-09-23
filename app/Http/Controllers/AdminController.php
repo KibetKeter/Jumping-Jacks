@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Supplier; 
+use App\Supplier;
 use App\Donor_Accounts;
 use App\Supplier_Accounts;
 use App\Orders;
 use App\Donation;
+use App\Stock;
 use Illuminate\Http\Request;
 use DB;
 
@@ -74,18 +75,18 @@ class AdminController extends Controller
                             return redirect()->route('view_supplier')->withSuccess(['Order has been Edited Successfully👍🏿']);
                         }
 //END
-               
+
                   // VIEW SUPPLIER TABLE CONTROLLER
 // START
 
 // END
                     // DELETE SUPPLIER TABLE
-//START 
+//START
                     public function deleteSupplier($id)
                         {
                             DB::delete('delete from suppliers where id =?',[$id]);
                             return redirect()->route('view_supplier')->withSuccess(['Supplier has been Deleted Successfully👍🏿']);
-                       }                       
+                       }
 
 
 // END
@@ -108,7 +109,7 @@ class AdminController extends Controller
                 $donor->save();
             return redirect()->route('admin_input_donor')->withSuccess(['Supplier has been Registered Successfully👍🏿']);
             }
-            
+
 
             // View donor inputs
             public function viewDonor()
@@ -139,7 +140,7 @@ class AdminController extends Controller
                         {
                             DB::delete('delete from donor__accounts where id =?',[$id]);
                             return redirect()->route('view_donor')->withSuccess(['Donor has been Deleted Successfully👍🏿']);
-                       }       
+                       }
 
 // end
                             // ORDER INPUTS
@@ -162,7 +163,7 @@ class AdminController extends Controller
                         $order->delivery_date = request('delivery');
                         $order->amount= request('amount');
                         $order->save();
-                    
+
                         $accounts = new Supplier_Accounts();
                         $accounts->supplier_name = request('supplier_name');
                         $accounts->item_ordered = request('order_item');
@@ -173,31 +174,31 @@ class AdminController extends Controller
                         return redirect()->route('admin_input_order')->withSuccess(['Order has been Registered Successfully👍🏿']);
                     }
             //END
-                    
+
 
              // VIEW ORDERTABLE CONTROLLER
     // START
             public function viewOrder()
-                { 
+                {
                     $orders = DB::select('select * from orders');
                     return view('Admin/vieworder', ['orders'=>$orders]);
                 }
     // END
 
                 // DELETE SUPPLIER TABLE
- //START 
+ //START
             public function deleteOrder($id)
             {
                 DB::delete('delete from orders where id =?',[$id]);
                 return redirect()->route('view_order')->withSuccess(['Order has been Deleted Successfully👍🏿']);
-            }                       
+            }
 
 // END
 
              // VIEW ACCOUNTS CONTROLLER
 
     public function viewAccounts()
-    { 
+    {
         $accounts = DB::select('select * from supplier__accounts');
         return view('Admin/checkaccounts', ['accounts'=>$accounts]);
     }
@@ -206,13 +207,13 @@ class AdminController extends Controller
      // EDIT ACCOUNTS CONTROLLER
 
      public function editAccounts($id)
-     { 
+     {
         $accounts = DB::select('select * from supplier__accounts where id = ?', [$id]);
         return view ('Admin/editaccounts' , ['accounts' => $accounts]);
      }
 
      public function updateAccounts(Request $request,$id)
-     { 
+     {
                     // $updated_accounts_name = $request->input('supplier_name');
                     // $updated_accounts_itemordered = $request->input('item_ordered');
                     // $updated_accounts_quantity= $request->input('quantity');
@@ -230,7 +231,7 @@ class AdminController extends Controller
                     $supplier_name =DB::select('select supplier_name from suppliers');
                     $orders = DB::select('select * from orders where id = ?', [$id]);
                     return view ('Admin/orderedit', ['supplier_name'=>$supplier_name ,'orders' => $orders]);
-                    
+
                 }
 // END
 
@@ -247,6 +248,70 @@ class AdminController extends Controller
                         return redirect()->route('view_order')->withSuccess(['Order has been Updated Successfully👍🏿']);
                     }
 //END
+
+
+       // RECORDING STOCK
+     // start
+// Load the Page
+public function record_stock()
+{
+    return view('Admin/recordstock');
+}
+// Push to DB
+public function push_to_form()
+{
+    $stocks = new Stock();
+    $stocks->stock_type = request('stock_type');
+    $stocks->stock_amount = request('stock_amount');
+    $stocks->delivery_date = request('delivery_date');
+    $stocks->best_before_date = request('best_before_date');
+    $stocks->description = request('description');
+    $stocks->save();
+return redirect()->route('admin_input_stock')->withSuccess(['Stock has been recorded successfully👍🏿']);
+}
+// end
+// VIEW STOCKS TABLE CONTROLLER
+// START
+public function viewStock()
+    {
+        $stocks = DB::select('select * from stocks');
+        return view('Admin/viewstock', ['stocks'=>$stocks]);
+    }
+// END
+// ********************EDIT SUPPLIER TABLE
+// START
+public function editstock($id)
+    {
+        $stocks = DB::select('select * from stocks where id = ?', [$id]);
+        return view ('Admin/editstock' , ['stocks' => $stocks]);
+    }
+// END
+// ********************UPDATE STOCKS TABLE
+// START
+public function updateStock(Request $request,$id)
+    {
+        $updated_stock_type = $request->input('stock_type');
+        $updated_stock_amount = $request->input('stock_amount');
+        $updated_delivery_date= $request->input('delivery_date');
+        $updated_best_before_date = $request->input('best_before_date');
+        $updated_description = $request->input('description');
+        DB::UPDATE('update stocks set stock_type=?, stock_amount=?, deluvery_date=?, best_before_date=?, description=? where id=?',
+        [$updated_stock_type,$updated_stock_amount,$updated_delivery_date,$updated_best_before_date,$updated_description,$id]);
+        return redirect()->route('view_stock')->withSuccess(['Stock has been updated Successfully👍🏿']);
+    }
+//END
+
+
+// DELETE SUPPLIER TABLE
+//START
+public function deleteStock($id)
+    {
+        DB::delete('delete from stocks where id =?',[$id]);
+        return redirect()->route('view_stock')->withSuccess(['Stock has been Successfully Deleted 👍🏿']);
+   }
+
+
+// END
 
 // **********************INPUT DONATIONS IN ADMIN
 
@@ -268,7 +333,7 @@ class AdminController extends Controller
 // VIEW DONATIONS TABLE
 
 // START
-                    
+
  public function viewdonations()
                         {
                             $donations = DB::select('select * from donations');
@@ -294,7 +359,7 @@ class AdminController extends Controller
                             $updated_donor_name = $request->input('donor_name');
                             $updated_description = $request->input('description');
                             $updated_amount= $request->input('amount');
-                    
+
                             DB::UPDATE('update donations set donor_name=?, description=?, amount=? where id=?',[$updated_donor_name,$updated_description, $updated_amount, $id]);
                             return redirect()->route('view_donations')->withSuccess(['Donations have been Edited Successfully👍🏿']);
                         }
@@ -306,9 +371,9 @@ public function deletedonations($id)
                         {
                             DB::delete('delete from donations where id =?',[$id]);
                             return redirect()->route('view_donations')->withSuccess(['Supplier has been Deleted Successfully👍🏿']);
-                       }                       
+                       }
     /**
-     * 
+     *
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
