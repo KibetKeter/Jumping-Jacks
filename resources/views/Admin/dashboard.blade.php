@@ -80,10 +80,10 @@
                   <!-- Content of Tile -->
                     <div class="x_content">
                         <p> This section is used to Create Update and Delete the Stock Details</p><br/>                                  
-                        <a href = "{{url('/admin/stockinput')}}"  type="button" class="btn btn-success">Record Stock</a>
-                        <button type="button" class="btn btn-success">View Stock</button><br/>
-                        <button type="button" class= "btn btn-rectangle btn-warning">Edit Stock</button>
-                        <button class="btn btn-rectangle btn-danger">Delete Stock</button>
+                        <a href = "{{url('/admin/stockinput')}}" type="button" class="btn btn-success">Record Stock</a>
+                        <a href = "{{ url('/admin/stockview/table')}}" type="button" class="btn btn-success">View Stock</a><br/>
+                        <a href = "{{ url('/admin/stockview/table')}}" type="button" class= "btn btn-rectangle btn-warning">Edit Stock</a>
+                        <a href = "{{ url('/admin/stockview/table')}}" class="btn btn-rectangle btn-danger">Delete Stock</a>
 
                         
 

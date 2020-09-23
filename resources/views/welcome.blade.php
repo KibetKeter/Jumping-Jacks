@@ -5,7 +5,7 @@
 <!-- Page title -->
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Jumping Jacks</title>
+        <title href = "{{ asset('') }}">Jumping Jacks</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
@@ -24,9 +24,9 @@
         <div id="menu-wrapper">
             <div id="menu" class="container">
                     <ul>
-                        <li class="current_page_item"><a href="#">Homepage</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="current_page_item"><a href="{{ asset('') }}">Homepage</a></li>
+                        <li><a href="#page">About</a></li>
+                        <li><a href="#footer-wrapper">Contact</a></li>
                             @if (Route::has('login'))
                                 @auth
                                     <li><a href="{{ url('/home') }}">Home</a></li>
@@ -90,8 +90,8 @@
     
 <!-- Absolute Footer -->
             <div id="copyright" class="container">
-                <p>&copy; Jumping Jacks Group. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> 
-                | Design by <a href=" http://127.0.0.1:8000" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
+                <p>&copy; Jumping Jacks Group. All rights reserved.
+                | Design by <a href="{{ asset('') }}" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
             </div>
 </div>
         </body>

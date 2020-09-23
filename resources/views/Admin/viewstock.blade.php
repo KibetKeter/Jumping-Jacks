@@ -1,5 +1,16 @@
 @extends('layouts.general')
 @section('content')
+@if(session()->has('success'))
+            <div class="alert">
+              <ul>
+                  @foreach(session()->get('success') as $message)
+                      <li>
+                         {{$message}}
+                      </li>
+                  @endforeach
+              </ul>
+            </div>
+  @endif
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">

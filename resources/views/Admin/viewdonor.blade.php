@@ -1,18 +1,7 @@
 @extends('layouts.general')
 @section('content')
 <title>Donors Table</title>
-  <!-- Success Message -->
-        @if(session()->has('success'))
-            <div class="alert">
-              <ul>
-                  @foreach(session()->get('success') as $message)
-                      <li>
-                         {{$message}}
-                      </li>
-                  @endforeach
-              </ul>
-            </div>
-        @endif
+
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
@@ -26,6 +15,18 @@
                     <p class="text-muted font-13 m-b-30">
                      The table below shows all the Donors registered in the Jumping Jacks Database
                     </p>
+                    <!-- Success Message -->
+        @if(session()->has('success'))
+            <div class="alert">
+              <ul>
+                  @foreach(session()->get('success') as $message)
+                      <li>
+                         {{$message}}
+                      </li>
+                  @endforeach
+              </ul>
+            </div>
+        @endif
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>

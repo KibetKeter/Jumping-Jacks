@@ -122,7 +122,7 @@ Route::get('/admin/stockview/table','AdminController@viewStock')->name('view_sto
 Route::get('/admin/stockview/click_edit/{id}', 'AdminController@editStock')->name('admin_edit_stock');
 Route::post('/admin/stockinput/update{id}','AdminController@updateStock')->name('admin_update_stock');
 //Route to delete stocks
-Route::get('/admin/orderinput/click_delete{id}','AdminController@deleteStock')->name('admin_delete_stock');
+Route::get('/admin/stockview/click_delete/{id}','AdminController@deleteStock')->name('admin_delete_stock');
 
 
 // Route to edit Donations details

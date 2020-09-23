@@ -297,7 +297,7 @@ public function updateStock(Request $request,$id)
         $updated_delivery_date= $request->input('delivery_date');
         $updated_best_before_date = $request->input('best_before_date');
         $updated_description = $request->input('description');
-        DB::UPDATE('update stocks set stock_type=?, stock_amount=?, deluvery_date=?, best_before_date=?, description=? where id=?',
+        DB::UPDATE('update stocks set stock_type=?, stock_amount=?, delivery_date=?, best_before_date=?, description=? where id=?',
         [$updated_stock_type,$updated_stock_amount,$updated_delivery_date,$updated_best_before_date,$updated_description,$id]);
         return redirect()->route('view_stock')->withSuccess(['Stock has been updated Successfully👍🏿']);
     }
@@ -309,7 +309,7 @@ public function updateStock(Request $request,$id)
 public function deleteStock($id)
     {
         DB::delete('delete from stocks where id =?',[$id]);
-        return redirect()->route('view_stock')->withSuccess(['Stock has been Successfully Deleted 👍🏿']);
+        return redirect()->route('view_stock')->withSuccess(['Stock has been Deleted Successfully👍🏿']);
    }
 
 
