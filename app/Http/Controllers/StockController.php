@@ -35,7 +35,6 @@ class StockController extends Controller
                    public function push_to_form()
                    {
                     $stock = new stock();
-                    $stock->stock_id = request('id');
                     $stock->stock_type = request('stock_type');
                     $stock->stock_amount = request('stock_amount');
                     $stock->delivery_date = request('delivery_date');

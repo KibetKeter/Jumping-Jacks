@@ -326,7 +326,7 @@ public function deleteStock($id)
         $donations->description = request('description');
         $donations->amount = request('amount');
         $donations->save();
-    return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
+    return redirect()->route('admininput_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
    }
 
 
