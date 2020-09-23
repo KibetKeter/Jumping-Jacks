@@ -62,6 +62,18 @@ This is the order edit page
 												<input name="quantity" type="text" id="first-name" value= "{{ $orders[0] ->quantity}}"  required="required" class="form-control ">
 											</div>
 										</div>
+                                         
+                                        <div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" ><strong>Order Status</strong><span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+                                            <select id = "supplier_name" name="payment_status" class="form-control" required>
+                                                        <option disabled selected>@if($orders[0]->paid == 0) <b> Not Paid <b> @else Paid @endif</option>
+                                                        <option value="1">Paid</option>
+                                                        
+                                                    </select>
+ 											</div>
+										</div>
 
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name"><strong>Expected day of delivery</strong><span class="required">*</span>

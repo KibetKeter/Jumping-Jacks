@@ -16,6 +16,6 @@ class Orders extends Model
      * @var array
      */
     protected $fillable = [
-        'supplier_name', 'item_ordered', 'quantity', 'delivery_date',
+        'supplier_name', 'item_ordered', 'quantity', 'amount', 'delivery_date',
     ];
 }

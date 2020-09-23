@@ -245,8 +245,10 @@ class AdminController extends Controller
                         $updated_orders_itemordered = $request->input('item_ordered');
                         $updated_orders_quantity= $request->input('quantity');
                         $updated_orders_delivery = $request->input('delivery_date');
-                        DB::UPDATE('update orders set supplier_name=?, item_ordered=?, quantity=?, delivery_date=? where id=?',
-                        [$updated_orders_name, $updated_orders_itemordered, $updated_orders_quantity, $updated_orders_delivery, $id]);
+                        $updated_payment_status= $request->input('payment_status');
+                         
+                        DB::UPDATE('update orders set supplier_name=?, item_ordered=?, quantity=?, delivery_date=?, paid=? where id=?',
+                        [$updated_orders_name, $updated_orders_itemordered, $updated_orders_quantity, $updated_orders_delivery, $updated_payment_status, $id]);
                         return redirect()->route('view_order')->withSuccess(['Order has been Updated Successfully👍🏿']);
                     }
 //END

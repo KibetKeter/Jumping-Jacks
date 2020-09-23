@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('quantity');
             $table->date('delivery_date');
             $table->integer('amount');
+            $table->boolean('paid')->default(false);
             $table->timestamps();
         });
     }
