@@ -101,8 +101,8 @@ Route::post('/admin/orderinput/update/{id}', 'AdminController@updateOrder')->nam
 Route::get('/admin/supplierinput/click_delete/{id}', 'AdminController@deleteSupplier')->name('admin_delete_supplier');
 
 // 11)  Input Donations into the Admin dashboard
-Route::get('/admin/donationsadmin', 'AdminController@input_donations')->name('input_donations');
-Route::post('/generaluser/donationsadmin/create', 'AdminController@push_towards_form')->name('input_donations.create');
+Route::get('/admin/donationsadmin', 'AdminController@input_donations')->name('admininput_donations');
+Route::post('/generaluser/donationsadmin/create', 'AdminController@push_towards_form')->name('admininput_donations.create');
 
 //12) Route to view Donations table
 Route::get('/admin/donationsadmin/table', 'AdminController@viewdonations')->name('view_donations');

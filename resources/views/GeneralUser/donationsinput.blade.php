@@ -9,7 +9,7 @@
 								</div>
 								<div class="x_content">
 									<br />
-							@if(session()->has('success'))
+									@if(session()->has('success'))
 								<div class="alert">
 									<ul>
 										@foreach(session()->get('success') as $message)
@@ -43,13 +43,13 @@
 											<input type="text" id="amount" name="amount" required="required" class="form-control" placeholder="Input numbers only!">
 										</div>
                                     </div>
-<div class = "container">
-<div class="ln_solid"></div>
-	<div class="item form-group">
-											
-<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>
-<button class="btn btn-primary" type="reset">Reset form</button>
-<button type="submit" class="btn btn-success">Submit</button>
+														<div class = "container">
+														<div class="ln_solid"></div>
+															<div class="item form-group">
+																									
+														<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>
+														<button class="btn btn-primary" type="reset">Reset form</button>
+														<button type="submit" class="btn btn-success">Submit</button>
 
 
 												</div>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Supplier; 
 use App\Donor_Accounts;
-use App\Donationinput;
+use App\Donation;
 use DB;
 
 class GeneralUserController extends Controller
@@ -66,14 +66,17 @@ class GeneralUserController extends Controller
 // end
 
 
-// Donations
-public function input_donations()
-    {
-      return view('GeneralUser/donationsinput');
-    }
+                                            // Donations
+                            // Start
+                            public function input_donations()
+                                {
+                                return view('GeneralUser/donationsinput');
+                                }
+                            // End
+    // Start
     public function push_towards_form()
     {
-        $donations = new Donationinput();
+        $donations = new Donation();
         $donations->donor_name  = request('donor_name');
         $donations->description = request('description');
         $donations->amount = request('amount');
@@ -81,6 +84,7 @@ public function input_donations()
     return redirect()->route('input_donations')->withSuccess(['Donations have been Recorded Successfully👍🏿']);
    }
 
+//    End
                                     //    STOCK TABLE CONTROLLER
             public function viewStock()
                     {   

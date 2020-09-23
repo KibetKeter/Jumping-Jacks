@@ -22,19 +22,7 @@
                                     @endif
 									<form action="{{ route('stock.create') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
-
-                                             <div class="item form-group">
-
-                                           <div class="item form-group">
-
-                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Stock ID <span class="required">*</span>
-                                                </label>
-                                              <div class="col-md-6 col-sm-6 ">
-                                                    <input name="id" type="text" id="first-name" required="required" class="form-control ">
-                                                </div> 
-                                            </div>
-
-                                        <div class="item form-group">
+                                                                              <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="stock_type">Type of Stock<span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
