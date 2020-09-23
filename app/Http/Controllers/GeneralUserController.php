@@ -64,8 +64,6 @@ class GeneralUserController extends Controller
 
    }
 // end
-
-
                                             // Donations
                             // Start
                             public function input_donations()

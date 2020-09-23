@@ -45,7 +45,7 @@
                     </table>
                   
                   </div>
-                  <a href = "{{ url ('/admin/stockview/table')}}" type="button" class="btn btn-primary">View Stock Details</a><br/>
+                  <a href = "{{ url ('/admin/stock')}}" type="button" class="btn btn-primary">Record Stock Details</a><br/>
                   <a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to Dashboard</a>
                 </div>
               </div>

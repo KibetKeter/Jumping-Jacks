@@ -111,8 +111,8 @@ Route::get('/admin/donationsadmin/table', 'AdminController@viewdonations')->name
 Route::get('/admin/orderinput/click_delete/{id}', 'AdminController@deleteOrder')->name('admin_delete_order');
 
 
-//14) Route to input /admin/stockinputstocks
-Route::get('', 'AdminController@input_Stock')->name('admin_input_stock');
+//14) Route to input stocks
+Route::get('/admin/stockinput', 'AdminController@input_Stock')->name('admin_input_stock');
 //Admin stock push to db
 Route::post('/admin/stockinput/create', 'AdminController@push_to_form')->name('admin_input_stock.create');
 
