@@ -78,11 +78,11 @@
                         </div>
                             <p>Find more Information about us on the following platforms</p>
                                 <ul class="contact">
-                                    <li><a href= "http://twitter.com"  class="icon icon-twitter"><span>Twitter</span></a></li>
-                                    <li><a href= "http://facebook.com" class="icon icon-facebook"><span>Facebook</span></a></li>
-                                    <li><a href="http://dribbble.com" class="icon icon-dribbble"><span>Dribbble</span></a></li>
-                                    <li><a href="http://tumblr.com" class="icon icon-tumblr"><span>Tumblr</span></a></li>
-                                    <li><a href="http://pinterest.com" class="icon icon-rss"><span>Pinterest</span></a></li>
+                                    <li><a href= "https://twitter.com"  class="icon icon-twitter"><span>Twitter</span></a></li>
+                                    <li><a href= "https://facebook.com" class="icon icon-facebook"><span>Facebook</span></a></li>
+                                    <li><a href="https://dribbble.com" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+                                    <li><a href="https://tumblr.com" class="icon icon-tumblr"><span>Tumblr</span></a></li>
+                                    <li><a href="https://pinterest.com" class="icon icon-rss"><span>Pinterest</span></a></li>
                                 </ul>
                         </div>
             </div>
@@ -91,7 +91,7 @@
 <!-- Absolute Footer -->
             <div id="copyright" class="container">
                 <p>&copy; Jumping Jacks Group. All rights reserved.
-                | Design by <a href="{{ asset('') }}" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
+                | Design by <a href="https://templated.co/grassygrass" rel="nofollow">TEMPLATED | Implemented by <strong>Jumping Jacks Group</strong>&copy;</a>.</p>
             </div>
 </div>
         </body>

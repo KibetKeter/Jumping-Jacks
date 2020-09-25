@@ -61,10 +61,10 @@
 									<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-											    <button type="submit" class="btn btn-success">Submit</button>
-												<button class="btn btn-primary" type="reset">Reset</button>
-                                                <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Donor </a><br/>		
-												<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to previous page</a>
+											    <button type="submit" class="btn btn-success">Submit Donor</button>
+												<button class="btn btn-primary" type="reset">Reset</button><br/>		
+                                                <a href="{{url('/admin/donorinput/table') }}" type="button" class="btn btn-primary">View Donor</a>
+												<a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to Admin Dashboard</a>
 											</div>
 										</div>
 

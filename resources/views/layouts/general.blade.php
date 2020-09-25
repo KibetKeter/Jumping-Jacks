@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -182,10 +182,7 @@
                 <div class="x_panel">
                   <div class="x_title">
                      <!-- <h2>This is your dashboard as a General User</h2> -->
-                       <ul class="nav navbar-right panel_toolbox">
-                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                          </li>
-                       </ul>
+                      
                     @yield('content')
                     <div class="clearfix"></div>
                   </div>

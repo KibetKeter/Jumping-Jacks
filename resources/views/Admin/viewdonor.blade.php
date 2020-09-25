@@ -66,7 +66,7 @@
                     </table>
                     <br/>
                     <a href="{{url('/admin/donorinput') }}" type="button" class="btn btn-primary">Register a Donor</a><br/>
-                    <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to General User Page</a>
+                    <a href="{{url('/generaluser')}}" class="btn btn-primary" type="button">Back to Admin Dashboard Page</a>
                   </div>
                 </div>
               </div>

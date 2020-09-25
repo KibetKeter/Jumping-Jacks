@@ -101,9 +101,9 @@
 									<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
+												<button type="submit" class="btn btn-success">Submit</button>
 												<a href="{{url('/admin')}}" class="btn btn-primary" type="button">Back to previous page</a>
 												<button class="btn btn-primary" type="reset">Reset</button>
-												<button type="submit" class="btn btn-success">Submit</button>
 												<a href = "{{ url('/admin/stockview/table')}}" type="button" class="btn btn-secondary">Click to view Stock inventory</a>
 											</div>
 										</div>

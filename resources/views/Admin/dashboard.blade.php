@@ -9,6 +9,7 @@
         </div>
     @endif
    <h5> You have administrator rights </h5>
+   <br/>
 </div>
 <div class="row">
     <!-- First Tile -->
@@ -17,7 +18,7 @@
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
                         <h2>Supplier 🚚</h2>
-                              <ul>
+                              <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                               </ul>
                   <div class="clearfix"></div>
@@ -43,7 +44,7 @@
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
                         <h2>Donors 🤵🏿</h2>
-                            <ul>
+                            <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
                             </ul>
@@ -71,7 +72,7 @@
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
                         <h2> Stock 📦</h2>
-                            <ul>
+                            <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
                             </ul>
@@ -79,7 +80,7 @@
                   </div>
                   <!-- Content of Tile -->
                     <div class="x_content">
-                        <p> This section is used to Create Update and Delete the Stock Details</p><br/>                                  
+                        <p> This section is used to Create Update and Delete the Stock Details</p><br/><br/>                                 
                         <a href = "{{url('/admin/stockinput')}}" type="button" class="btn btn-success">Record Stock</a>
                         <a href = "{{ url('/admin/stockview/table')}}" type="button" class="btn btn-success">View Stock</a><br/>
                         <a href = "{{ url('/admin/stockview/table')}}" type="button" class= "btn btn-rectangle btn-warning">Edit Stock</a>
@@ -99,7 +100,7 @@
                 <!-- Title of Tile and Minimize button -->
                   <div class="x_title">
                         <h2 style ="text-align:center">Donations💸</h2>
-                            <ul>
+                            <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
                             </ul>
@@ -130,15 +131,13 @@
                                                   </ul>
                                               <div class="clearfix"></div>
                                         </div>
-                                      
                                           <div class="x_content">
                                                <p> This section is used to Create Update and Delete Orders</p><br/>            
-                                           </div>
                                           <a href="{{url('/admin/orderinput') }}" type="button" class="btn btn-success">Register Order</a>
                                           <a href="{{url('/admin/orderinput/table') }}" type="button" class="btn btn-success">View Orders</a><br/>
                                           <a href="{{url('/admin/orderinput/table') }}" type="button" class= "btn btn-rectangle btn-warning">Edit Orders</a>
                                           <a href="{{url('/admin/orderinput/table') }}" class="btn btn-rectangle btn-danger">Delete Order</a>
-
+                                      </div>
                                 </div>
                               </div>
                  
@@ -160,10 +159,8 @@
                           </div>
                             <div class="x_content">
                               <p>This section is used to view account details in the company.</p><br/>
-                            </div>
-                        
                               <a href="{{ route('view_accounts')}} " type="button" class="btn btn-success">Manage Order Transaction</a>
-                    </div>
+                            </div>
                             </div>
                           </div>
                 </div>

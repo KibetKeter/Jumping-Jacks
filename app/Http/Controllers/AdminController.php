@@ -365,7 +365,7 @@ public function deleteStock($id)
                             $updated_amount= $request->input('amount');
 
                             DB::UPDATE('update donations set donor_name=?, description=?, amount=? where id=?',[$updated_donor_name,$updated_description, $updated_amount, $id]);
-                            return redirect()->route('view_donations')->withSuccess(['Donations have been Edited Successfully👍🏿']);
+                            return redirect()->route('view_donations')->withSuccess(['Donations have been edited Successfully👍🏿']);
                         }
 //END
 
@@ -374,7 +374,7 @@ public function deleteStock($id)
 public function deletedonations($id)
                         {
                             DB::delete('delete from donations where id =?',[$id]);
-                            return redirect()->route('view_donations')->withSuccess(['Supplier has been Deleted Successfully👍🏿']);
+                            return redirect()->route('view_donations')->withSuccess(['Donations has been deleted Successfully👍🏿']);
                        }
     /**
      *

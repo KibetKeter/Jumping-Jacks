@@ -1,16 +1,5 @@
 @extends('layouts.general')
 @section('content')
-@if(session()->has('success'))
-            <div class="alert">
-              <ul>
-                  @foreach(session()->get('success') as $message)
-                      <li>
-                         {{$message}}
-                      </li>
-                  @endforeach
-              </ul>
-            </div>
-  @endif
 <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
@@ -25,6 +14,17 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
+                            @if(session()->has('success'))
+                              <div class="alert">
+                                <ul>
+                                    @foreach(session()->get('success') as $message)
+                                        <li>
+                                          {{$message}}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                              </div>
+                            @endif
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>

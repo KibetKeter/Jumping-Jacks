@@ -35,8 +35,9 @@
                           <th>Quantity of Material Ordered</th>
                           <th>Cost of Order(Kshs)</th>
                           <th>Date of Delivery</th>
-                          <th>Order Status</th>
+                          <th>Payment Status</th>
                           <th>Created at</th>
+                          <th>Payment Status</th>
                           <th>Edit</th>
                           <th>Delete</th>
                         </tr>
@@ -52,6 +53,9 @@
                                 <td>{{$row->delivery_date}}</td>
                                 <td>@if($row->paid == 0) <b> Not Paid <b> @else  <b>  Paid  <b> @endif</td>
                                 <td>{{$row->created_at}}</td>
+                                <td>
+                                    <a href= "click_edit/{{ $row->id }} "  class= "btn btn-info">Click me to set Payment Status</a>
+                                </td>
                                 <td>
                                     <a href= "click_edit/{{ $row->id }} " class= "btn btn-round btn-warning">Edit</a>
                                 </td>

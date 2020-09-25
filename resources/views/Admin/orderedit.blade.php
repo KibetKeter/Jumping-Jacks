@@ -1,6 +1,5 @@
 @extends('layouts.general')
 @section('content')
-This is the order edit page
 <div class="row">
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
@@ -10,18 +9,6 @@ This is the order edit page
 								</div>
 								<div class="x_content">
 									<br />
-									<!-- Success Message -->
-										@if(session()->has('success'))
-										<div class="alert">
-											<ul>
-												@foreach(session()->get('success') as $message)
-													<li>
-														{{$message}}
-													</li>
-												@endforeach
-											</ul>
-										</div>
-										@endif
 									<form   action="/admin/orderinput/update/{{ $orders[0]->id}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                         @csrf
                                         <div class="item form-group">

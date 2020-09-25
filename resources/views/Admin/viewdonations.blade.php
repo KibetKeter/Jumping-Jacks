@@ -32,7 +32,7 @@
                           <th>ID</th>
                           <th>Donor Name</th>
                           <th>Description</th>
-                          <th>Amount</th>
+                          <th>Amount(Kshs)</th>
                           <th>Created at</th>
                           <th>Updated at</th>
                           <th>Edit</th>
